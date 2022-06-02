@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-decouple = "*"
+django-crispy-forms = "*"
+django-mdeditor = "*"
+pillow = "*"
+markdown = "*"
+md-mermaid = "*"
+pygments = "*"
+django-comments-dab = "*"
+numpy = "*"
+matplotlib = "*"
+plotly = "*"
+
+[dev-packages]
+pycodestyle = "*"
+autopep8 = "*"
+coverage = "*"
+
+[requires]
+python_version = "3.9"
