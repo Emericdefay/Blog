@@ -1,11 +1,17 @@
 const themeBtn = document.querySelector('.theme-toggler');
 const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-if (prefersDarkTheme.matches) {
-  localStorage.setItem('theme', 'dark');
+let currentTheme;
+if (localStorage.getItem('theme')) {
+  currentTheme = localStorage.getItem('theme');
+} else {
+  if (prefersDarkTheme.matches) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+    currentTheme = localStorage.getItem('theme');
+  }
 }
-
-const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme == 'dark') {
   // set dark theme

@@ -13,17 +13,7 @@
     <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}K0rporation{% endblock title %}</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/codehilite_styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/darktheme.css' %}">
-    <link rel="stylesheet" href="{% static 'css/output.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/background.css' %}">
-    <script src="{% static 'js/mermaid.min.js' %}"></script>
-    <script>
-      mermaid.initialize({ startOnLoad: true });
-    </script>
+
   </head>
 
   <body>
@@ -99,12 +89,25 @@
       
       {% endblock content %}
     </div>
-    <script src="{% static 'js/theme.js' %}"></script>
+
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
     <script src="{% static 'js/copy-button.js' %}"></script>
     <script src="{% static 'js/background.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/codehilite_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darktheme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/background.css' %}">
+    <script src="{% static 'js/mermaid.min.js' %}"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
 
     <script>
       let scrolled = true;

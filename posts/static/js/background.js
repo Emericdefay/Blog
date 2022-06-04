@@ -7,6 +7,36 @@ let skyColor = '#110E19'; //ciel
     fontColor = '#ffffff',
     night=true;
 
+if (localStorage.getItem('theme')) {
+  night=(localStorage.getItem('theme') == 'dark' ? false : true);
+} else {
+  if (prefersDarkTheme.matches) {
+      night=true;
+  } else {
+    night=false;
+  }
+}
+
+if (night) {
+    skyColor = '#bddfde'; //ciel
+    terrainColor = "#bbbbbb";
+    starsColor = '#bddfde';
+    montain1Color = '#b4d4d3';
+    montain2Color = "#4e8a94";
+    montain3Color = "#43787e"; // montagne 1er plan
+    fontColor = '#bddfde'; // stars
+    night=false;
+} else {
+    skyColor = '#110E19'; //ciel
+    terrainColor = "#191D4C";
+    starsColor = '#05004c';
+    montain1Color = "#191d4c";
+    montain2Color = "rgb(17,20,40)";
+    montain3Color = "rgb(10,10,5)";
+    fontColor = '#ffffff';
+    night=true;
+}
+
 $('.theme-toggler').click(() => {
     if (night) {
         skyColor = '#bddfde'; //ciel

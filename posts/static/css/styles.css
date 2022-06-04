@@ -17,8 +17,14 @@ body {
 	font-family: "PT-Sans-Regular";
 	line-height: 1.5 !important;
 	font-size: 1.2rem !important;
+	min-width: fit-content;
+	display: contents;
+
 }
 
+.navbar {
+	width: 100vw;
+}
 .main {
 	display: flex;
     justify-content: center;
