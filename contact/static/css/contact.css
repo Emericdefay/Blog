@@ -35,7 +35,8 @@ body {
 .form-horizontal {
   display: grid;
   /*float: left;*/
-  max-width: 400px;
+  width: 100%;
+  /* max-width: 400px; */
   font-family: 'Lato';
   font-weight: 400;
 }
@@ -61,14 +62,14 @@ textarea {
   transition: all .2s ease-in-out;
 }
 
-[data-theme=light] .send-button {
+[data-theme=light] .send-button,[data-theme=light] .send-button:hover {
   display: flex;
   color: #363742;
   background-color: #bddfde;
   border-color: #43787e;
   width: initial;
 }
-[data-theme=dark] .send-button {
+[data-theme=dark] .send-button,[data-theme=dark] .send-button:hover {
   display: flex;
   width: initial;
 }

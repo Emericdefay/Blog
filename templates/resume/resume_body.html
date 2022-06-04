@@ -4,21 +4,20 @@
 {% load comment_tags %}
 
 {% block title %}
-{{ post.title }} - {{ block.super }}
+Emeric Defay - {{ block.super }}
 {% endblock title %}
 
 {% block content %}
 
 <head>
   <meta charset="UTF-8">
-  <title>Ben Crabtree's Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <script src="{% static 'js/resume_index.js' %}"></script>
   <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
 </head>
 
-<body>
+<section>
   <div class="page">
     <div class="upper-quarter">
       <div class="content">
@@ -32,10 +31,6 @@
               <h3>Développeur</h3>
             </div>
           </div>
-          <div class="contact">
-            <h3>Téléphone: 07-77-04-65-99</h3>
-            <h3 class="email">Email: emericdefay@gmail.com</h3>
-          </div>
         </div>
       </div>
     </div>
@@ -45,71 +40,40 @@
           <header>
             <h2>Experience</h2>
           </header>
-          <div class="riser">
-            <img class="ac-logo" src="https://i.imgur.com/rZ06QuQ.png">
+          <div class="cci">
+            <img class="actif-logo" src="{% static "img/logo_actif.png" %}">
             <!-- bold -->
-            <h3>AncestorCloud</h3>
-            <h4>April 2015 - Present</h4>
+            <h3>CCI Savoie</h3>
+            <h4><a href="https://portail.actif-cci.fr/" target="_blank">ACTIF - portail de l'économie circulaire</a></h4>
+            <h4>Janvier 2022 - Juin 2022</h4>
             <ul>
-              <li>Created user personas, designed for those personas and assisted in implementing those designs.</li>
-              <li>Determined user flows, onboarding processes and UI design for both user groups.</li>
-              <li>Wireframed, designed and generated content for investor slide deck presentations.</li>
-            </ul>
-          </div>
-          <div class="riser">
-            <img class="riser-logo" src="https://i.imgur.com/ZhSvPoL.png">
-            <!-- bold -->
-            <h3>Riser Design Agency</h3>
-            <h4>May 2014 - December 2014</h4>
-            <ul>
-              <li>Designed and illustrated several drawings for Google.</li>
-              <li>Created several landing pages for ABC. </li>
-              <li>Assisted in the branding process of multiple companies.</li>
-            </ul>
-          </div>
-          <div class="byu">
-            <img class="byu-logo" src="https://i.imgur.com/2JdJghU.png">
-            <!-- bold -->
-            <h3>BYU, Mueseum of Art & The Center for Teaching and Learning, UX/UI</h3>
-            <h4>July 2013 - April 2014</h4>
-            <ul>
-              <li>Designed the interface & navigation for the <a href="https://itunes.apple.com/us/app/sacred-gifts-brigham-young/id723165787?mt=8" target="blank">Sacred Gifts iPad app.</a></li>
-              <li>Collaborated with department heads, project managers and iOS developers.</li>
-            </ul>
-          </div>
-          <div class="vivint">
-            <img class="vivint-logo" src="https://i.imgur.com/TOGws6b.png">
-            <!-- bold -->
-            <h3>Vivint, Sales</h3>
-            <h4>April 2012 - July 2013</h4>
-            <ul>
-              <li>Top first-year representative in the Northern California office for sales production.</li>
-              <li>Provided security, medical, & smart home solutions to over 70 families.</li>
-              <li>Built successful referral system through positive customer relations. </li>
+              <li>Déterminer le cahier des charges pour l'élaboration d'une plateforme d'économie circulaire.</li>
+              <li>Coordination avec une autre équipe de développeur pour concevoir l'application</li>
+              <li>Réalisation de la plateforme en Django et Bootstrap</li>
+              <li>Pipeline : tests unitaires et E2E, lint et requirements</li>
+              <li>Emploi de Docker pour faciliter la mise en production</li>
             </ul>
           </div>
         </div>
         <div class="personal-experience">
           <header>
-            <h2>Personal Experience</h2>
+            <h2>Experience Personnelle</h2>
           </header>
           <div class="waya">
             <img class="waya-logo" src="https://i.imgur.com/Vdzz2UG.png">
             <div class="waya-text">
-              <h3>WAYA: Hardwood Headphone Wrapper</h3>
-              <a href="http://kck.st/1yFQBO9" target="blank">http://kck.st/1yFQBO9</a>
+              <h3>exp1</h3>
+              <a href="" target="blank">site</a>
             </div>
           </div>
           <div class="fpgc">
             <img class="fpgc-logo" src="https://i.imgur.com/cKYjhSw.png">
             <div class="fpgc-text">
-              <h3>Frying Pans & Garbage Cans</h3>
-              <a href="http://kck.st/1oQnWpv" target="blank">http://kck.st/1oQnWpv</a>
+              <h3>exp1</h3>
+              <a href="" target="blank">site</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="right-column">
         <div class="education">
           <header>
             <h2>Education</h2>
@@ -120,33 +84,6 @@
               <h3>Brigham Young University</h3>
               <h4>Technology and Engineering Education, BS   •   December 2015</h4>
             </div>
-          </div>
-        </div>
-        <div class="skills">
-          <header>
-            <h2>Skills</h2>
-          </header>
-          <div class="skill-lists">
-            <ul class="left">
-              <li>Sketch</li>
-              <li>Adobe Photoshop</li>
-              <li>Adobe Illustrator</li>
-              <li>UI Design</li>
-              <li>Slack</li>
-              <li>Adobe InDesign</li>
-              <li>User Research</li>
-              <li>Branding</li>
-            </ul>
-            <ul class="right">
-              <li>UX Design</li>
-              <li>Basic HTML/CSS</li>
-              <li>Web Design</li>
-              <li>Laser Engraving</li>
-              <li>Illustration</li>
-              <li>Storyboarding</li>
-              <li>Basic 3D Printing</li>
-              <li>Public Speaking</li>
-            </ul>
           </div>
         </div>
         <div class="traits-hobbies">
@@ -189,22 +126,246 @@
                 <li>Laser Engraving</li>
               </ul>
             </div>
-
-          </div>
-
-        </div>
-        <div class="Awards">
-          <header>
-            <h2>Awards</h2>
-          </header>
-          <div class="crocker">
-            <div class="crocker-text">
-              <h3>2015 Crocker Innovation Fellow</h3>
-              <a href="http://www.crockerinnovationfellows.com/2015-crocker-fellows.html" target="blank">www.crockerinnovationfellows.com/2015</a>
-            </div>
           </div>
         </div>
       </div>
-</body>
+      <div class="right-column">
+        <header>
+            <h2>Compétences</h2>
+        </header>
+        <div class="skills">
+          <ul class="lines">
+              <li class="line l--0">
+                <span class="line__label title">
+                  Niveau:
+                </span>
+              </li>
+              <li class="line l--25">
+                <span class="line__label">
+                  Les bases
+                </span>
+              </li>
+              <li class="line l--50">
+                <span class="line__label">
+                  Avancé
+                </span>
+              </li>
+              <li class="line l--75">
+                <span class="line__label">
+                  Maitrise
+                </span>
+              </li>
+              <li class="line l--100">
+                <span class="line__label">
+                  Expert
+                </span>
+              </li>
+          </ul>
+          
+        <div class="charts">
+          <div class="chart chart--dev">
+            <span class="chart__title">Langage Objet</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 90%;">
+                <span class="chart__label">
+                  Python
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 60%;">
+                <span class="chart__label">
+                  NodeJS
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 60%;">
+                <span class="chart__label">
+                  Arduino
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  AutoHotKey
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 30%;">
+                <span class="chart__label">
+                  C#
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--prod">
+            <span class="chart__title">Backend</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  Django
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 60%;">
+                <span class="chart__label">
+                  Flask
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 70%;">
+                <span class="chart__label">
+                  Stripe
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--prod">
+            <span class="chart__title">Frontend</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 90%;">
+                <span class="chart__label">
+                  HTML5
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 90%;">
+                <span class="chart__label">
+                  CSS3
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 98%;">
+                <span class="chart__label">
+                  Bootstrap
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  Javascript
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  jQuery
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--prod">
+            <span class="chart__title">Productivité</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 70%;">
+                <span class="chart__label">
+                  Sentry
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 70%;">
+                <span class="chart__label">
+                  npm
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  git
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 70%;">
+                <span class="chart__label">
+                  Docker
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  CircleCI
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--prod">
+            <span class="chart__title">Bases de données</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 50%;">
+                <span class="chart__label">
+                  AWS
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 85%;">
+                <span class="chart__label">
+                  SQLite3
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 75%;">
+                <span class="chart__label">
+                  PostgreSQL
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--prod">
+            <span class="chart__title">Systèmes</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  Windows
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 50%;">
+                <span class="chart__label">
+                  Linux
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 25%;">
+                <span class="chart__label">
+                  Apple
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--prod">
+            <span class="chart__title">Sciences</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 75%;">
+                <span class="chart__label">
+                  Mathématiques
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 85%;">
+                <span class="chart__label">
+                  Physique
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 80%;">
+                <span class="chart__label">
+                  Sciences de l'ingénieur
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="chart chart--design">
+            <span class="chart__title">Design</span>
+            <ul class="chart--horiz">
+              <li class="chart__bar" style="width: 70%;">
+                <span class="chart__label">
+                  Photoshop
+                </span>
+              </li>
+              <li class="chart__bar" style="width: 8q0%;">
+                <span class="chart__label">
+                  UX Design
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {% comment %} 
+      <div class="Récompenses">
+        <header>
+          <h2>Récompenses</h2>
+        </header>
+        <div class="recompense">
+          <div class="recompense-text">
+            <h3>2015 Crocker Innovation Fellow</h3>
+            <a href="site" target="blank">site</a>
+          </div>
+        </div>
+      </div> 
+      {% endcomment %}
+    </div>
+  </div>
+</section>
 
 {% endblock content %}
