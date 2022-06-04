@@ -34,6 +34,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [
 
 INSTALLED_APPS = [
     'posts',
+    'contact',
+    'resume',
 
     'mdeditor',
     'crispy_forms',
@@ -140,11 +142,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
+MEDIA_URL = '/media/'
 STATIC_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
 ]
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -169,8 +177,8 @@ if not DEBUG:
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-    EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_email')
+    #EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+    #EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_email')
 
 COMMENT_FLAGS_ALLOWED = 3
 
@@ -185,3 +193,15 @@ COMMENT_FLAG_REASONS = [
 COMMENT_ALLOW_ANONYMOUS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
+
+# EMAIL SERVICE
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')

@@ -9,6 +9,8 @@ urlpatterns = [
     path('mdeditor/', include('mdeditor.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('comment/', include('comment.urls')),
+    path('resume/', include('resume.urls')),
+    path('contact/', include('contact.urls')),
 ]
 
 if settings.DEBUG:

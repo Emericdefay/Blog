@@ -9,7 +9,6 @@ register = template.Library()
 @stringfilter
 def markdown(value):
     return md.markdown(value, extensions=[
-        'md_mermaid',
         'markdown.extensions.fenced_code',
         'markdown.extensions.codehilite',
     ])

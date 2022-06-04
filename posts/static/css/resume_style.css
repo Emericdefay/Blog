@@ -1,0 +1,568 @@
+/* Variables */
+:root{
+  --main-bg-color: transparent; 
+  --head-bg-color: rgb(36, 36, 36, 0.6); 
+  --block-bg-color: currentColor; 
+}
+
+
+h1 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 26pt;
+  color: #fff;
+  margin-left: -1px;
+}
+
+h4 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 8pt;
+  color: #5d5d5d;
+  padding-top: 3px;
+}
+
+.page {
+  background-color: var(--main-bg-color);
+  margin: auto;
+  max-width: 1650px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  margin-bottom: 50px;
+}
+
+.upper-quarter {
+  background-image: url('../img/Developer.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  height: 390px;
+  background-position: 50% 10%;
+}
+
+.upper-quarter h3 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #FFF;
+}
+
+.content {
+  max-width: 1125px;
+  margin: auto;
+}
+
+.contact-me {
+  padding-top: 50px;
+  display: block;
+  margin-left: 3.75%;
+  padding-top: 50px 40px;
+  max-width: 1125px;
+}
+
+.me {
+  display: inline-block;
+  width: 350px;
+}
+
+.logo {
+  width: auto;
+  height: 120px;
+  display: inline-block;
+}
+
+.name {
+  display: inline-block;
+  width: 250px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+
+.name h3 {
+  display: inline-block;
+}
+
+.slash {
+  padding: 0px 8px;
+}
+
+.contact {
+  margin-top: 20px;
+  padding: 15px 15px;
+  width: 300px;
+  background-color: var(--head-bg-color);
+}
+
+.contact h3 {
+  text-decoration: none;
+}
+
+.email {
+  padding-top: 5px;
+}
+
+.lower-three-quarters {
+  max-width: 1125px;
+  margin: auto;
+  position: relative;
+  display: flow-root;
+  padding-bottom: 60px;
+}
+
+.lower-three-quarters h3 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 12pt;
+  color: #5d5d5d;
+
+}
+
+.left-column {
+  width: 45%;
+  margin-left: 3.75%;
+  display: inline-block;
+  position: relative;
+  top: -90px;
+}
+
+.left-column header {
+  background-color: var(--head-bg-color);
+  padding: 10px;
+}
+
+.left-column h2 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 22pt;
+  color: white;
+  padding-left: 10px;
+}
+
+.left-column h3 {
+  padding-left: 15px;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.left-column h4 {
+  padding-left: 15px;
+  margin-top: 2.5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.left-column li{
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #5d5d5d;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 20px;
+  margin-left: 35px;
+  list-style-type: circle;
+}
+
+.experience {
+  border: 2px solid var(--head-bg-color);
+  margin-bottom: 25px;
+  background-color: var(--block-bg-color);
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+}
+
+.riser {
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 10px;
+}
+
+.experience a {
+  color: var(--head-bg-color);
+}
+
+.experience a:hover {
+  color: #3d98ff;
+}
+
+.experience a:active {
+  color: #0000FF;
+}
+
+.ac-logo {
+  width: 250px;
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+}
+
+.riser-logo {
+  width: 130px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.byu {
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 10px
+}
+
+.byu-logo {
+  width: 80px;
+  height: 80px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.vivint {
+  padding: 0px 10px 25px 10px;
+}
+
+.vivint-logo {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.personal-experience {
+  border: 2px solid var(--head-bg-color);
+  background-color: var(--head-bg-color);
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+}
+
+.personal-experience h3 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #FFF;
+  width: 300px;
+  padding-bottom: 5px;
+}
+
+.personal-experience a {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #FFF;
+  width: 300px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.personal-experience a:hover {
+  color: #e0dede;
+}
+
+.waya {
+  display: inline-block;
+}
+
+.waya-logo {
+  padding: 25px 25px;
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+}
+
+.waya-text {
+  display: inline-block;
+  float: right;
+  padding-top: 35px;
+  padding-right: 10%;
+}
+
+.fpgc {
+  display: inline-block;
+}
+
+.fpgc-logo {
+  padding: 25px 25px;
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+}
+  
+.fpgc-text {
+  display: inline-block;
+  float: right;
+  padding-top: 35px;
+  padding-right: 10%;
+}
+
+.right-column {
+  width: 45%;
+  margin-right: 3.75%;
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: -90px;
+}
+
+.right-column header {
+  background-color: var(--block-bg-color);
+  padding: 10px;
+}
+
+.right-column h2 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 22pt;
+  color: #5d5d5d;
+  padding-left: 10px;
+}
+
+.education {
+  background-color: var(--block-bg-color);
+  border: 2px solid var(--head-bg-color);
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+}
+
+.education img {
+  width: 80px;
+  height: 80px;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+.ed-info {
+  margin-bottom: 30px;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.info {
+  width: 65%;
+  display: inline-block;
+  float: right;
+  padding-top: 45px;
+  padding-right: 55px;
+}
+
+.skills {
+  background-color: var(--block-bg-color);
+  border: 2px solid var(--head-bg-color);
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+}
+
+.skills li {
+  list-style-type: none;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #FFF;
+  background-color: var(--head-bg-color);
+  padding: 12px 60px 12px 30px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+.skill-lists {
+  margin-top: 22px;
+  width: 100%;
+}
+
+.left {
+  margin-left: 23px;
+  display: inline-block;
+  background-color: var(--block-bg-color);
+  margin-bottom: 25px;
+}
+
+.right {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.traits-hobbies {
+  background-color: var(--block-bg-color);
+  border: 2px solid var(--head-bg-color);
+  padding-bottom: 20px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+}
+
+.traits-hobbies h2 {
+  padding-bottom: 10px;
+}
+
+.traits-hobbies li {
+  list-style-type: none;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #535353;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.traits-list {
+  padding-bottom: 8px;
+}
+
+.hobbies-list ul {
+  width: 32%;
+}
+
+.left-hobbies {
+  display: inline-block;
+}
+
+.center-hobbies {
+  display: inline-block;
+}
+
+.right-hobbies {
+  display: inline-block;
+}
+
+.left-traits {
+  display: inline-block;
+}
+
+.center-traits {
+  display: inline-block;
+}
+
+.right-traits {
+  display: inline-block;
+}
+.Awards {
+  background-color: var(--block-bg-color);
+  border: 2px solid var(--head-bg-color);
+  margin-top:25px;
+  padding-bottom: 40px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+}
+
+.crocker-text {
+  display: inline-block;
+  padding-left:20px;
+  padding-top:35px;
+}
+.Awards a {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: var(--head-bg-color);
+  width: 300px;
+  padding-bottom: 20px;
+  padding-top:5px;
+  display: inline-block;
+}
+  
+@media only screen and (max-width: 1649px) {
+  .page {
+    background-color: var(--main-bg-color);
+    margin: auto;
+    max-width: 1650px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 0px;
+  }
+
+  @media only screen and (max-width: 1140px) {
+    .skills li {
+      display: block;
+    }
+    .skills li {
+      font-family: 'Open Sans';
+      font-weight: 300;
+      font-size: 12pt;
+      color: #FFF;
+      background-color: var(--head-bg-color);
+      padding: 12px 60px 12px 30px;
+      margin: 5%;
+    }
+    .skill-lists {
+      margin-top: 22px;
+      width: 100%;
+    }
+    .left {
+      margin-left: 0px;
+      display: inline-block;
+      background-color: var(--block-bg-color);
+      margin-bottom: -5%;
+      width: 100%;
+    }
+    .right {
+      margin-left: 0px;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 1.5%;
+    }
+    @media only screen and (max-width: 1050px) {
+      .lower-three-quarters {
+        width: 90%;
+        margin: auto;
+      }
+      .left-column {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 25px;
+      }
+      .right-column {
+        width: 100%;
+        margin: auto;
+      }
+      .content {
+        width: 90%;
+      }
+      .contact-me {
+        width: 100%;
+        margin-left: 0px;
+      }
+      .fpgc {
+        width: 75%;
+      }
+      @media only screen and (max-width: 870px) {
+        .upper-quarter {
+          background-size: 130%;
+          height: 390px;
+        }
+      }
+      @media only screen and (max-width: 670px) {
+        .upper-quarter {
+          background-size: 150%;
+          height: 390px;
+        }
+      }
+      @media only screen and (max-width: 580px) {
+        .upper-quarter {
+          background-size: 170%;
+          height: 390px;
+        }
+      }
+      @media only screen and (max-width: 515px) {
+        .upper-quarter {
+          background-size: 190%;
+          height: 390px;
+        }
+      }
+      @media only screen and (max-width: 460px) {
+        .upper-quarter {
+          background-size: 220%;
+          height: 390px;
+        }
+      }
+    }
+  }
+}
