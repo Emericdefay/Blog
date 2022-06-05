@@ -15,6 +15,8 @@
   --text-skills-skill-color: #ffffff;
   --lines-bg-color: #353b41;
   --linear-bg-color: linear-gradient(to left, #4cb8c4, #3cd3ad);
+
+  --height-lines : 1450px;
 }
 
 [data-theme=light] {
@@ -42,7 +44,7 @@
   --text-title-plain-color: #ffffff; 
   --text-texts-plain-color: #e1e1e1; 
   --text-links-plain-color: #6fadff; 
-  --text-title-trspr-color: #497289; 
+  --text-title-trspr-color: #ffffff; 
   --text-texts-trspr-color: #ffffff; 
   --text-links-trspr-color: #6fadff;
 
@@ -121,10 +123,22 @@ h4 {
   margin: auto;
 }
 
+[data-theme=light] .send-button,[data-theme=light] .send-button:hover {
+	display: initial;
+	color: #363742;
+	background-color: #f7f8ed;
+	border-color: #f6e6ea;
+	width: initial;
+}
+[data-theme=dark] .send-button,[data-theme=dark] .send-button:hover {
+	display: initial;
+	width: initial;
+}
+
 .contact-me {
   padding-top: 0px;
   display: block;
-  margin-left: 3.75%;
+  margin: 0 !important;
   padding-top: 50px 40px;
   max-width: 1125px;
 }
@@ -143,7 +157,6 @@ h4 {
   display: inline-block;
   align-self: center;
   text-align: center;
-  margin-right: 33%;
   width: 250px;
   padding-left: 10px;
   padding-bottom: 2px;
@@ -451,7 +464,7 @@ h4 {
   background-color: var(--lines-bg-color);
   /* padding: 12px 60px 12px 30px; */
   margin-left: -2px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .skill-lists {
@@ -498,6 +511,7 @@ h4 {
   padding-bottom: 0px;
   display: flex;
 }
+
 
 .hobbies-list ul {
   width: 32%;
@@ -563,6 +577,23 @@ h4 {
   padding-top:5px;
   display: inline-block;
 }
+
+.line__label {
+  display: flex;
+  /* width: 100px; */
+  position: relative;
+  bottom: calc(-1 * var(--height-lines));
+  right: 20px;
+}
+
+.skills {
+  width: 99.8%;
+  max-width: 960px;
+  display: flex;
+  height: var(--height-lines);
+  position: relative;
+  flex-direction: column;
+}
   
 @media only screen and (max-width: 1649px) {
   .page {
@@ -574,6 +605,12 @@ h4 {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
     margin-bottom: 0px;
   }
+  .line__label {
+    bottom: calc(-1 * var(--height-lines));
+  }
+  .skills {
+    height: var(--height-lines);
+  }
 
   @media only screen and (max-width: 1140px) {
     .skills li {
@@ -584,9 +621,15 @@ h4 {
       font-weight: 300;
       font-size: 12pt;
       color: #FFF;
-      background-color: var(--head-bg-color);
-      padding: 12px 60px 12px 30px;
-      margin: 5%;
+      background-color: var(--lines-bg-color);
+      /* padding: 12px 60px 12px 30px; */
+      margin-bottom: 8px;
+    }
+    .line__label {
+      bottom: calc(-1 * var(--height-lines));
+    }
+    .skills {
+      height: var(--height-lines);
     }
     .skill-lists {
       margin-top: 22px;
@@ -610,6 +653,21 @@ h4 {
         width: 90%;
         margin: auto;
       }
+      .skills li {
+        font-family: 'Open Sans';
+        font-weight: 300;
+        font-size: 12pt;
+        color: #FFF;
+        background-color: var(--lines-bg-color);
+        /* padding: 12px 60px 12px 30px; */
+        margin-bottom: 8px;
+      }
+      .line__label {
+        bottom: calc(-1 * var(--height-lines));
+      }
+      .skills {
+        height: var(--height-lines);
+      }
       .left-column {
         width: 100%;
         margin: auto;
@@ -632,7 +690,22 @@ h4 {
       @media only screen and (max-width: 870px) {
         .upper-quarter {
           background-size: 130%;
-          height: 390px;
+          height: 330px;
+        }
+        .skills li {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          font-size: 12pt;
+          color: #FFF;
+          background-color: var(--lines-bg-color);
+          /* padding: 12px 60px 12px 30px; */
+          margin-bottom: 8px;
+        }
+        .line__label {
+          bottom: calc(-1 * var(--height-lines));
+        }
+        .skills {
+          height: var(--height-lines);
         }
       }
       @media only screen and (max-width: 670px) {
@@ -640,11 +713,41 @@ h4 {
           background-size: 150%;
           height: 390px;
         }
+        .skills li {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          font-size: 12pt;
+          color: #FFF;
+          background-color: var(--lines-bg-color);
+          /* padding: 12px 60px 12px 30px; */
+          margin-bottom: 8px;
+        }
+        .line__label {
+          bottom: calc(-1 * var(--height-lines));
+        }
+        .skills {
+          height: var(--height-lines);
+        }
       }
       @media only screen and (max-width: 580px) {
         .upper-quarter {
           background-size: 170%;
-          height: 390px;
+          height: 330px;
+        }
+        .skills li {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          font-size: 12pt;
+          color: #FFF;
+          background-color: var(--lines-bg-color);
+          /* padding: 12px 60px 12px 30px; */
+          margin-bottom: 8px;
+        }
+        .line__label {
+          bottom: calc(-1 * var(--height-lines));
+        }
+        .skills {
+          height: var(--height-lines);
         }
       }
       @media only screen and (max-width: 515px) {
@@ -652,19 +755,155 @@ h4 {
           background-size: 190%;
           height: 390px;
         }
+        .skills li {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          font-size: 12pt;
+          color: #FFF;
+          background-color: var(--lines-bg-color);
+          /* padding: 12px 60px 12px 30px; */
+          margin-bottom: 8px;
+        }
+        .line__label {
+          bottom: calc(-1 * var(--height-lines));
+        }
+        .skills {
+          height: var(--height-lines);
+        }
       }
       @media only screen and (max-width: 460px) {
         .upper-quarter {
           background-size: 220%;
-          height: 450px;
+          height: 460px;
         }
         .name {
           margin-right: 0%;
+        }
+        .skills li {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          font-size: 12pt;
+          color: #FFF;
+          background-color: var(--lines-bg-color);
+          /* padding: 12px 60px 12px 30px; */
+          margin-bottom: 8px;
+        }
+        .line__label {
+          bottom: calc(-1 * var(--height-lines));
+        }
+        .skills {
+          height: var(--height-lines);
+        }
+      }
+      @media only screen and (max-width: 300px) {
+        .upper-quarter {
+          background-size: 220%;
+          height: 530px;
+        }
+        .name {
+          margin-right: 0%;
+        }
+        .skills li {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          font-size: 12pt;
+          color: #FFF;
+          background-color: var(--lines-bg-color);
+          /* padding: 12px 60px 12px 30px; */
+          margin-bottom: 8px;
+        }
+        .line__label {
+          bottom: calc(-1 * var(--height-lines));
+        }
+        .skills {
+          height: var(--height-lines);
         }
       }
     }
   }
 }
+
+@media (max-height: 1649px) {
+
+  @media (max-height: 1140px) {
+
+    @media (max-height: 1050px) {
+
+      @media (max-height: 870px) {
+        .upper-quarter {
+          height: 330px;
+        }
+      }
+      @media (max-height: 920px) {
+        .upper-quarter {
+          height: 360px;
+        }
+      }
+
+      @media (max-height: 900px) {
+        .upper-quarter {
+          height: 330px;
+        }
+      }
+      @media (max-height: 870px) {
+        .upper-quarter {
+          height: 460px;
+        }
+      }
+      @media (max-height: 801px) {
+        .upper-quarter {
+          height: 330px;
+        }
+      }
+      @media (max-height: 750px) {
+        .upper-quarter {
+          height: 460px;
+        }
+      }
+      @media (max-height: 720px) {
+        .upper-quarter {
+          height: 330px;
+        }
+      }
+      @media (max-height: 670px) {
+        .upper-quarter {
+          height: 460px;
+        }
+
+      @media (max-height: 654px) {
+        .upper-quarter {
+          height: 530px;
+        }
+      }
+      @media (max-height: 601px) {
+        .upper-quarter {
+          height: 340px;
+        }
+      }
+      @media (max-height: 580px) {
+        .upper-quarter {
+          height: 330px;
+        }
+      }
+      @media (max-height: 515px) {
+        .upper-quarter {
+          height: 390px;
+        }
+      }
+      @media (max-height: 460px) {
+        .upper-quarter {
+          height: 460px;
+        }
+      }
+      @media (max-height: 300px) {
+        .upper-quarter {
+          height: 530px;
+        }
+      }
+    }
+  }
+}
+
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
@@ -673,14 +912,7 @@ body {
   color: #282828;
 }
 
-.skills {
-  width: 99.8%;
-  max-width: 960px;
-  display: flex;
-  height: 1775px;
-  position: relative;
-  flex-direction: column;
-}
+
 
 .lines {
   height: 100%;
@@ -709,13 +941,6 @@ body {
   left: calc(100% - 1px);
 }
 
-.line__label {
-  display: block;
-  width: 100px;
-  position: absolute;
-  bottom: -25px;
-  right: -73px;
-}
 .line__label.title {
   text-transform: uppercase;
   font-weight: bold;

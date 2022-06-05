@@ -13,7 +13,7 @@ Emeric Defay - {{ block.super }}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-  <script src="{% static 'js/resume_index.js' %}"></script>
+  <script src="{% static 'js/resume_lines.js' %}"></script>
   <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
   <link rel="stylesheet" media="print" href="{% static 'css/resume_style_print.css' %}">
 </head>
@@ -22,15 +22,19 @@ Emeric Defay - {{ block.super }}
   <div class="page">
     <div class="upper-quarter">
       <div class="content container">
-        <div class="contact-me row row-cols-2">
-          <img class="logo col" src="{% static "img/emeric.jpg" %}">
-          <div class='name col'>
+        <div class="contact-me row" id="contact-me">
+          <img class="logo col col-xl-6 col-lg-6 col-md-6 col-sm-12" src="{% static "img/emeric.jpg" %}">
+          <div class='name col col-xl-6 col-lg-6 col-md-6 col-sm-12'>
             <h1>Emeric DEFAY</h1>
             <h3>Data Scientist</h3>
             <h3 class="slash">/</h3>
             <h3>Développeur</h3>
-            <p class="d-print-none">
-              <button onclick="print()">Imprimez le CV</button>
+            <p class="d-print-none mt-2">
+              <button class="d-print-none mt-2 btn btn-primary send-button" onclick="print()" value="Imprimez le CV">
+                <div class="alt-send-button">
+                  <i class="fa fa-file-text-o"></i><span class="send-text">Imprimez le CV</span>
+                </div>
+              </button>
             </p>
             <p class="d-none d-print-block">emericdefay@gmail.com</p>
             <p class="d-none d-print-block">(+33) 7 77 04 65 99</p>
@@ -154,6 +158,13 @@ Emeric Defay - {{ block.super }}
               <h4>2019 - 2020</h4>
             </div>
           </div>
+          <div class="ed-info d-print-none">
+            <div class="info">
+              <h3>Chetawan School</h3>
+              <h4>Bac Masseur Thérapeuthique</h4>
+              <h4>2018 - 2019</h4>
+            </div>
+          </div>
           <div class="ed-info">
             <div class="info">
               <h3>Telecom Physique Strasbourg</h3>
@@ -174,73 +185,116 @@ Emeric Defay - {{ block.super }}
             <header>
               <h2>Personnalité</h2>
             </header>
-            <div class="traits-list">
-              <ul class="left-traits">
+            <div class="traits-list row">
+              <ul class="left-traits col col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <li>Associateur d'idées</li>
                 <li>Prototypeur</li>
                 <li>Créatif</li>
               </ul>
-              <ul class="center-traits">
+              <ul class="center-traits col col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <li>Développeur</li>
                 <li>Organisé</li>
                 <li>Observateur</li>
               </ul>
-              <ul class="right-traits">
+              <ul class="right-traits col col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <li>Bon équipier</li>
                 <li>Enteprenant</li>
                 <li>Flexible</li>
               </ul>
             </div>
-            <div class="hobbies">
-              <header>
-                <h2>Hobbies</h2>
-              </header>
-              <div class="hobbies-list">
-                <ul class="left-hobbies">
-                  <li>Guitare</li>
-                  <li>FL Studio</li>
-                </ul>
-                <ul class="center-hobbies">
-                  <li>Illustration</li>
-                  <li>Randonnées</li>
-                </ul>
-                <ul class="right-hobbies">
-                  <li>Programmation</li>
-                  <li>Jeux-vidéos</li>
-                </ul>
-              </div>
+            <header>
+              <h2>Hobbies</h2>
+            </header>
+            <div class="traits-list row">
+              <ul class="left-hobbies col col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                <li>Guitare</li>
+                <li>FL Studio</li>
+              </ul>
+              <ul class="center-hobbies col col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                <li>Illustration</li>
+                <li>Randonnées</li>
+              </ul>
+              <ul class="right-hobbies col col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                <li>Programmation</li>
+                <li>Jeux-vidéos</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="right-column">
+        <div class="personal-experience d-none d-print-block">
+          <header>
+            <h2>Experiences Personnelles</h2>
+          </header>
+          <div class="interface-switch">
+            <div class="interface-switch-text">
+              <h3>◽ Interface PC à Nintendo Switch pour taches automatiques</h3>
+            </div>
+          </div>
+          <div class="musicsheet">
+            <div class="musicsheet-text">
+              <h3>◽ Perforeuse Papier à Musique Automatique</h3>
+            </div>
+          </div>
+          <div class="osu">
+            <div class="osu-text">
+              <h3>◽ Générateur de map sur Osu!</h3>
+            </div>
+          </div>
+          <div class="deaf">
+            <div class="deaf-text">
+              <h3>◽ Interpréteur de Musique pour les sourds</h3>
+            </div>
+          </div>
+          <div class="bot">
+            <div class="bot-text">
+              <h3>◽ Bots de jeux vidéos</h3>
+            </div>
+          </div>
+        </div>
         <header>
             <h2 class="plain-title">Compétences</h2>
         </header>
         <div class="skills">
           <ul class="lines">
               <li class="line l--0">
-                <span class="line__label title">
+                <span class="line__label titled-print-block d-none d-sm-block">
                   Niveau:
+                </span>
+                <span class="line__label title d-sm-none d-print-none">
+                  Niv:
                 </span>
               </li>
               <li class="line l--25">
-                <span class="line__label">
+                <span class="line__label d-none d-sm-block d-print-block">
                   Basique
+                </span>
+                <span class="line__label d-sm-none d-print-none">
+                  Base
                 </span>
               </li>
               <li class="line l--50">
-                <span class="line__label">
+                <span class="line__label d-none d-sm-block d-print-block">
+                  Avancé
+                </span>
+                <span class="line__label d-sm-none d-print-none">
                   Avancé
                 </span>
               </li>
               <li class="line l--75">
-                <span class="line__label">
+                <span class="line__label d-none d-sm-block d-print-block">
                   Maitrise
+                </span>
+                <span class="line__label d-sm-none d-print-none">
+                  Maitre
                 </span>
               </li>
               <li class="line l--100">
-                <span class="line__label">
+                <span class="line__label d-none d-sm-block d-print-block">
+                  Expert
+                </span>
+                <span class="line__label d-sm-none d-print-none">
                   Expert
                 </span>
               </li>
