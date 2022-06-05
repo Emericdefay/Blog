@@ -26,7 +26,8 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=False)
-
+print("allowed hosts : ")
+print(config('ALLOWED_HOSTS'))
 print(config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')]))
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [
                        s.strip() for s in v.split(',')])
