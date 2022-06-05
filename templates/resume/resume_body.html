@@ -15,21 +15,25 @@ Emeric Defay - {{ block.super }}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <script src="{% static 'js/resume_index.js' %}"></script>
   <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
+  <link rel="stylesheet" media="print" href="{% static 'css/resume_style_print.css' %}">
 </head>
 
 <section>
   <div class="page">
     <div class="upper-quarter">
-      <div class="content">
-        <div class="contact-me">
-          <div class="me">
-            <img class="logo" src="{% static "img/emeric.jpg" %}">
-            <div class='name'>
-              <h1>Emeric DEFAY</h1>
-              <h3>Data Scientist</h3>
-              <h3 class="slash">/</h3>
-              <h3>Développeur</h3>
-            </div>
+      <div class="content container">
+        <div class="contact-me row row-cols-2">
+          <img class="logo col" src="{% static "img/emeric.jpg" %}">
+          <div class='name col'>
+            <h1>Emeric DEFAY</h1>
+            <h3>Data Scientist</h3>
+            <h3 class="slash">/</h3>
+            <h3>Développeur</h3>
+            <p class="d-print-none">
+              <button onclick="print()">Imprimez le CV</button>
+            </p>
+            <p class="d-none d-print-block">emericdefay@gmail.com</p>
+            <p class="d-none d-print-block">(+33) 7 77 04 65 99</p>
           </div>
         </div>
       </div>
@@ -38,100 +42,180 @@ Emeric Defay - {{ block.super }}
       <div class="left-column">
         <div class="experience">
           <header>
-            <h2>Experience</h2>
+            <h2 class="plain-title">Experiences</h2>
           </header>
           <div class="cci">
-            <img class="actif-logo" src="{% static "img/logo_actif.png" %}">
             <!-- bold -->
-            <h3>CCI Savoie</h3>
-            <h4><a href="https://portail.actif-cci.fr/" target="_blank">ACTIF - portail de l'économie circulaire</a></h4>
-            <h4>Janvier 2022 - Juin 2022</h4>
+            <div class="container"><div class="row row-cols-2">
+              <div class="col-8">
+                <h3>Auto-entrepreneur</h3>
+                <h4><a href="/">Création de sites web et outils en Python</a></h4>
+                <h4>Juin 2022 - Aujourd'hui</h4>
+              </div>
+              <div class="col experience-logo">
+                <img class="actif-logo d-print-none" src="{% static "img/logo_korp.png" %}">
+              </div>
+            </div></div>
             <ul>
-              <li>Déterminer le cahier des charges pour l'élaboration d'une plateforme d'économie circulaire.</li>
-              <li>Coordination avec une autre équipe de développeur pour concevoir l'application</li>
+              <li>Réalisation de sites en Django</li>
+              <li>Création de contenu Machine Learning et Django</li>
+              {% comment %} <li>Mentorat</li> {% endcomment %}
+            </ul>
+          </div>
+          <div class="cci">
+            <!-- bold -->
+            <div class="container"><div class="row row-cols-2">
+              <div class="col-8">
+                <h3>Les Elephants</h3>
+                <h4><a href="https://github.com/Emericdefay/Elephants" target="_blank">Gestionnaire de commandes de restaurant</a></h4>
+                <h4>Mars 2022 - Juin 2022</h4>
+              </div>
+              <div class="col experience-logo">
+                <img class="actif-logo d-print-none" src="{% static "img/logo_elephants.png" %}">
+              </div>
+            </div></div>
+            <ul>
               <li>Réalisation de la plateforme en Django et Bootstrap</li>
-              <li>Pipeline : tests unitaires et E2E, lint et requirements</li>
+              <li>Utilisation de npm pour intégrer jquery, bootstrap, scss</li>
+              <li>Gère plusieurs centaines de clients</li>
+            </ul>
+          </div>
+          <div class="cci">
+            <!-- bold -->
+            <div class="container"><div class="row row-cols-2">
+              <div class="col-8">
+                <h3>CCI Savoie</h3>
+                <h4><a href="https://portail.actif-cci.fr/" target="_blank">ACTIF - portail de l'économie circulaire</a></h4>
+                <h4>Janvier 2022 - Juin 2022</h4>
+              </div>
+              <div class="col experience-logo">
+                <img class="actif-logo d-print-none" src="{% static "img/logo_actif.png" %}">
+              </div>
+            </div></div>
+            <ul>
+              <li>Réalisation de la plateforme en Django et Bootstrap</li>
+              <li>Pipeline : tests (unitaires et E2E), lint et requirements</li>
               <li>Emploi de Docker pour faciliter la mise en production</li>
             </ul>
           </div>
         </div>
-        <div class="personal-experience">
+        <div class="personal-experience d-print-none">
           <header>
-            <h2>Experience Personnelle</h2>
+            <h2>Experiences Personnelles</h2>
           </header>
-          <div class="waya">
-            <img class="waya-logo" src="https://i.imgur.com/Vdzz2UG.png">
-            <div class="waya-text">
-              <h3>exp1</h3>
-              <a href="" target="blank">site</a>
+          <div class="interface-switch">
+            <div class="interface-switch-text">
+              <h3>◽ Interface PC à Nintendo Switch pour taches automatiques</h3>
             </div>
           </div>
-          <div class="fpgc">
-            <img class="fpgc-logo" src="https://i.imgur.com/cKYjhSw.png">
-            <div class="fpgc-text">
-              <h3>exp1</h3>
-              <a href="" target="blank">site</a>
+          <div class="musicsheet">
+            <div class="musicsheet-text">
+              <h3>◽ Perforeuse Papier à Musique Automatique</h3>
+            </div>
+          </div>
+          <div class="osu">
+            <div class="osu-text">
+              <h3>◽ Générateur de map sur Osu!</h3>
+            </div>
+          </div>
+          <div class="deaf">
+            <div class="deaf-text">
+              <h3>◽ Interpréteur de Musique pour les sourds</h3>
+            </div>
+          </div>
+          <div class="bot">
+            <div class="bot-text">
+              <h3>◽ Bots de jeux vidéos</h3>
             </div>
           </div>
         </div>
         <div class="education">
           <header>
-            <h2>Education</h2>
+            <h2 class="plain-title">Formations</h2>
           </header>
           <div class="ed-info">
-            <img src="https://i.imgur.com/2JdJghU.png">
             <div class="info">
-              <h3>Brigham Young University</h3>
-              <h4>Technology and Engineering Education, BS   •   December 2015</h4>
+              <h3>OpenClassRooms</h3>
+              <h4>Bac+5 Ingénieur Machine Learning </h4>
+              <h4>2021 - 2022</h4>
+            </div>
+          </div>
+          <div class="ed-info">
+            <div class="info">
+              <h3>OpenClassRooms</h3>
+              <h4>Bac+4 Développeur Python </h4>
+              <h4>2020 - 2021</h4>
+            </div>
+          </div>
+          <div class="ed-info">
+            <div class="info">
+              <h3>CERUS Casino</h3>
+              <h4>Bac Croupier de table</h4>
+              <h4>2019 - 2020</h4>
+            </div>
+          </div>
+          <div class="ed-info">
+            <div class="info">
+              <h3>Telecom Physique Strasbourg</h3>
+              <h4>Bac+3 Ingénieur TI-Santé </h4>
+              <h4>2016 - 2017</h4>
+            </div>
+          </div>
+          <div class="ed-info">
+            <div class="info">
+              <h3>Lycée Henri Parriat</h3>
+              <h4>Bac+2 CPGE TSI </h4>
+              <h4>2013 - 2016</h4>
             </div>
           </div>
         </div>
-        <div class="traits-hobbies">
-          <header>
-            <h2>Traits</h2>
-          </header>
-          <div class="traits-list">
-            <ul class="left-traits">
-              <li>Associative Thinker</li>
-              <li>Prototyper</li>
-              <li>Iterative Designer</li>
-            </ul>
-            <ul class="center-traits">
-              <li>Developer
-              </li>
-              <li>Idea Generator</li>
-              <li>Observer</li>
-            </ul>
-            <ul class="right-traits">
-              <li>Team Worker</li>
-              <li>Coder</li>
-              <li>Wood Worker</li>
-            </ul>
-          </div>
-          <div class="hobbies">
+        <div class="optionnal-traits">
+          <div class="traits-hobbies">
             <header>
-              <h2>Hobbies</h2>
+              <h2>Personnalité</h2>
             </header>
-            <div class="hobbies-list">
-              <ul class="left-hobbies">
-                <li>Kickstarter</li>
-                <li>Running</li>
+            <div class="traits-list">
+              <ul class="left-traits">
+                <li>Associateur d'idées</li>
+                <li>Prototypeur</li>
+                <li>Créatif</li>
               </ul>
-              <ul class="center-hobbies">
-                <li>Illustration</li>
-                <li>Camping</li>
+              <ul class="center-traits">
+                <li>Développeur</li>
+                <li>Organisé</li>
+                <li>Observateur</li>
               </ul>
-              <ul class="right-hobbies">
-                <li>Vinyl Cutting</li>
-                <li>Laser Engraving</li>
+              <ul class="right-traits">
+                <li>Bon équipier</li>
+                <li>Enteprenant</li>
+                <li>Flexible</li>
               </ul>
+            </div>
+            <div class="hobbies">
+              <header>
+                <h2>Hobbies</h2>
+              </header>
+              <div class="hobbies-list">
+                <ul class="left-hobbies">
+                  <li>Guitare</li>
+                  <li>FL Studio</li>
+                </ul>
+                <ul class="center-hobbies">
+                  <li>Illustration</li>
+                  <li>Randonnées</li>
+                </ul>
+                <ul class="right-hobbies">
+                  <li>Programmation</li>
+                  <li>Jeux-vidéos</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="right-column">
         <header>
-            <h2>Compétences</h2>
+            <h2 class="plain-title">Compétences</h2>
         </header>
         <div class="skills">
           <ul class="lines">
@@ -142,7 +226,7 @@ Emeric Defay - {{ block.super }}
               </li>
               <li class="line l--25">
                 <span class="line__label">
-                  Les bases
+                  Basique
                 </span>
               </li>
               <li class="line l--50">
@@ -163,7 +247,7 @@ Emeric Defay - {{ block.super }}
           </ul>
           
         <div class="charts">
-          <div class="chart chart--dev">
+          <div class="chart chart--dev d-print-none">
             <span class="chart__title">Langage Objet</span>
             <ul class="chart--horiz">
               <li class="chart__bar" style="width: 90%;">
@@ -293,7 +377,7 @@ Emeric Defay - {{ block.super }}
               </li>
             </ul>
           </div>
-          <div class="chart chart--prod">
+          <div class="chart chart--prod d-print-none">
             <span class="chart__title">Systèmes</span>
             <ul class="chart--horiz">
               <li class="chart__bar" style="width: 80%;">
@@ -313,7 +397,7 @@ Emeric Defay - {{ block.super }}
               </li>
             </ul>
           </div>
-          <div class="chart chart--prod">
+          <div class="chart chart--prod d-print-none">
             <span class="chart__title">Sciences</span>
             <ul class="chart--horiz">
               <li class="chart__bar" style="width: 75%;">
@@ -333,7 +417,7 @@ Emeric Defay - {{ block.super }}
               </li>
             </ul>
           </div>
-          <div class="chart chart--design">
+          <div class="chart chart--design d-print-none">
             <span class="chart__title">Design</span>
             <ul class="chart--horiz">
               <li class="chart__bar" style="width: 70%;">

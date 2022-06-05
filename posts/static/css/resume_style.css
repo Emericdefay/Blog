@@ -1,12 +1,59 @@
 /* Variables */
 :root{
   --main-bg-color: transparent; 
-  --head-bg-color: rgb(36, 36, 36, 0.6); 
-  --block-bg-color: currentColor; 
+  --head-bg-color: rgb(67 120 126 / 25%);
+  --block-bg-color: #b4d4d3e6; 
+  --bg-skill-color: #43787e; 
+  --text-title-plain-color: #ffffff; 
+  --text-texts-plain-color: #323232; 
+  --text-links-plain-color: #1562b7; 
+  --text-title-trspr-color: #343a40; 
+  --text-texts-trspr-color: #ffffff; 
+  --text-links-trspr-color: #ffffff;
+
+  --text-skills-title-color: #343a40;
+  --text-skills-skill-color: #ffffff;
+  --lines-bg-color: #353b41;
+  --linear-bg-color: linear-gradient(to left, #4cb8c4, #3cd3ad);
+}
+
+[data-theme=light] {
+  --main-bg-color: transparent; 
+  --head-bg-color: rgb(67 120 126 / 25%);
+  --block-bg-color: #bddfded6;
+  --bg-skill-color: #43787e; 
+  --text-title-plain-color: #ffffff; 
+  --text-texts-plain-color: #323232; 
+  --text-links-plain-color: #1562b7; 
+  --text-title-trspr-color: #343a40; 
+  --text-texts-trspr-color: #ffffff; 
+  --text-links-trspr-color: #ffffff;
+
+  --text-skills-title-color: #343a40;
+  --text-skills-skill-color: #ffffff;
+  --lines-bg-color: #353b41;
+  --linear-bg-color: linear-gradient(to left, #4cb8c4, #3cd3ad);
+}
+[data-theme=dark] {
+  --main-bg-color: transparent; 
+  --head-bg-color: rgb(0 0 0 / 30%);
+  --block-bg-color: #222222a6; 
+  --bg-skill-color: #43787e; 
+  --text-title-plain-color: #ffffff; 
+  --text-texts-plain-color: #e1e1e1; 
+  --text-links-plain-color: #6fadff; 
+  --text-title-trspr-color: #497289; 
+  --text-texts-trspr-color: #ffffff; 
+  --text-links-trspr-color: #6fadff;
+
+  --text-skills-title-color: #e1e1e1;
+  --text-skills-skill-color: #ffffff;
+  --lines-bg-color: #497289;
+  --linear-bg-color: linear-gradient(to left, #495057, #4e61a7);
 }
 
 
-h1 {
+h1:not(.nav-title) {
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 26pt;
@@ -14,11 +61,33 @@ h1 {
   margin-left: -1px;
 }
 
+.plain-title {
+  color: var(--text-title-plain-color);
+}
+.cci {
+  color: var(--text-texts-plain-color)
+}
+
+.personal-experience, .traits-hobbies {
+  color: var(--text-texts-trspr-color);
+}
+.personal-experience h2, .traits-hobbies h2{
+  color: var(--text-title-trspr-color);
+}
+.personal-experience li, .traits-hobbies li{
+  color: var(--text-texts-trspr-color);
+}
+.personal-experience h3, .traits-hobbies h3{
+  color: var(--text-texts-trspr-color);
+}
+.personal-experience a, .traits-hobbies a{
+  color: var(--text-links-trspr-color);
+}
+
 h4 {
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 8pt;
-  color: #5d5d5d;
   padding-top: 3px;
 }
 
@@ -36,7 +105,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
-  height: 390px;
+  height: 325px;
   background-position: 50% 10%;
 }
 
@@ -53,7 +122,7 @@ h4 {
 }
 
 .contact-me {
-  padding-top: 50px;
+  padding-top: 0px;
   display: block;
   margin-left: 3.75%;
   padding-top: 50px 40px;
@@ -66,16 +135,21 @@ h4 {
 }
 
 .logo {
-  width: auto;
-  height: 120px;
-  display: inline-block;
+  object-fit: scale-down;
+  height: 220px;
 }
 
 .name {
   display: inline-block;
+  align-self: center;
+  text-align: center;
+  margin-right: 33%;
   width: 250px;
   padding-left: 10px;
   padding-bottom: 2px;
+}
+.name h1, .name h3{
+  color: var(--text-title-trspr-color);
 }
 
 .name h3 {
@@ -113,7 +187,6 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 12pt;
-  color: #5d5d5d;
 
 }
 
@@ -126,6 +199,7 @@ h4 {
 }
 
 .left-column header {
+  display: contents;
   background-color: var(--head-bg-color);
   padding: 10px;
 }
@@ -134,7 +208,6 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 22pt;
-  color: white;
   padding-left: 10px;
 }
 
@@ -147,7 +220,7 @@ h4 {
 .left-column h4 {
   padding-left: 15px;
   margin-top: 2.5px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-size: 14px;
 }
 
@@ -155,7 +228,6 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 12pt;
-  color: #5d5d5d;
   padding-top: 5px;
   padding-bottom: 5px;
   line-height: 20px;
@@ -172,13 +244,32 @@ h4 {
   box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
 }
 
+.experience-logo {
+  align-self: center;
+  text-align: center;
+}
+
+.actif-logo {
+   width: 55px;
+}
+[data-theme=light] .actif-logo {
+   width: 55px;
+   -webkit-filter: drop-shadow(0px 0px 10px #bbb);
+   filter: drop-shadow(0px 0px 10px #bbb);
+}
+[data-theme=dark] .actif-logo {
+   width: 55px;
+   -webkit-filter: drop-shadow(0px 0px 10px #fff);
+   filter: drop-shadow(0px 0px 10px #fff);
+}
+
 .riser {
   padding: 10px 10px 0px 10px;
   margin-bottom: 10px;
 }
 
 .experience a {
-  color: var(--head-bg-color);
+  color: var(--text-links-plain-color);
 }
 
 .experience a:hover {
@@ -239,8 +330,7 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 12pt;
-  color: #FFF;
-  width: 300px;
+  width: 100%;
   padding-bottom: 5px;
 }
 
@@ -248,7 +338,6 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 12pt;
-  color: #FFF;
   width: 300px;
   padding-bottom: 5px;
   padding-left: 15px;
@@ -305,7 +394,8 @@ h4 {
 }
 
 .right-column header {
-  background-color: var(--block-bg-color);
+  margin-left: -2px;
+  background-color: var(--lines-bg-color);
   padding: 10px;
 }
 
@@ -313,7 +403,6 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 22pt;
-  color: #5d5d5d;
   padding-left: 10px;
 }
 
@@ -336,17 +425,19 @@ h4 {
 }
 
 .ed-info {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+     margin-top: 10px;
   margin-left: 15px;
   width: 100%;
 }
 
 .info {
-  width: 65%;
-  display: inline-block;
+  width: 100%;
+  display: contents;
   float: right;
-  padding-top: 45px;
-  padding-right: 55px;
+  padding-top: 25px;
+  /* padding-right: 55px; */
+  color: var(--text-texts-plain-color);
 }
 
 
@@ -357,9 +448,9 @@ h4 {
   font-weight: 300;
   font-size: 12pt;
   color: #FFF;
-  background-color: var(--head-bg-color);
+  background-color: var(--lines-bg-color);
   /* padding: 12px 60px 12px 30px; */
-  margin-left: 0px;
+  margin-left: -2px;
   margin-bottom: 20px;
 }
 
@@ -398,14 +489,14 @@ h4 {
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 12pt;
-  color: #535353;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   padding-right: 20px;
   padding-bottom: 5px;
 }
 
 .traits-list {
-  padding-bottom: 8px;
+  padding-bottom: 0px;
+  display: flex;
 }
 
 .hobbies-list ul {
@@ -413,27 +504,39 @@ h4 {
 }
 
 .left-hobbies {
+  text-align: center;
   display: inline-block;
+  padding-left: 0px;
 }
 
 .center-hobbies {
+  text-align: center;
   display: inline-block;
+  padding-left: 0px;
 }
 
 .right-hobbies {
+  text-align: center;
   display: inline-block;
+  padding-left: 0px;
 }
 
 .left-traits {
+  text-align: center;
   display: inline-block;
+  padding-left: 0px;
 }
 
 .center-traits {
+  text-align: center;
   display: inline-block;
+  padding-left: 0px;
 }
 
 .right-traits {
+  text-align: center;
   display: inline-block;
+  padding-left: 0px;
 }
 .Awards {
   background-color: var(--block-bg-color);
@@ -553,7 +656,10 @@ h4 {
       @media only screen and (max-width: 460px) {
         .upper-quarter {
           background-size: 220%;
-          height: 390px;
+          height: 450px;
+        }
+        .name {
+          margin-right: 0%;
         }
       }
     }
@@ -571,7 +677,7 @@ body {
   width: 99.8%;
   max-width: 960px;
   display: flex;
-  height: 1900px;
+  height: 1775px;
   position: relative;
   flex-direction: column;
 }
@@ -607,8 +713,8 @@ body {
   display: block;
   width: 100px;
   position: absolute;
-  bottom: -20px;
-  right: -80px;
+  bottom: -25px;
+  right: -73px;
 }
 .line__label.title {
   text-transform: uppercase;
@@ -625,11 +731,12 @@ body {
 }
 
 .chart:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .chart__title {
-  padding-left: 5px;
+  padding-left: 2px;
+  color: var(--text-skills-title-color);
   display: block;
   margin: 0 0 10px;
   font-weight: bold;
@@ -640,12 +747,13 @@ body {
 .chart--horiz {
   overflow: hidden;
   padding-left: 0px;
+  margin-bottom: 0rem;
 }
 
 .chart__bar {
   height: 30px;
   margin-bottom: 10px;
-  background: linear-gradient(to left, #4cb8c4, #3cd3ad);
+  background: var(--linear-bg-color);
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   opacity: 0;
@@ -655,7 +763,7 @@ body {
 .chart__label {
   padding-left: 10px;
   line-height: 30px;
-  color: white;
+  color: var(--text-skills-skill-color);
 }
 
 @keyframes anim-lightspeed-in {

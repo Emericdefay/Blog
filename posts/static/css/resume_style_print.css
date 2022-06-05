@@ -1,0 +1,38 @@
+
+.skills {
+  width: 99.8%;
+  max-width: 960px;
+  display: flex;
+  height: 1040px;
+  position: relative;
+  flex-direction: column;
+}
+
+canvas {
+  display: none;
+}
+.optionnal-traits {
+  display: none;
+}
+
+html {
+  height: 297mm;
+}
+
+@page {
+  margin: 0mm 0mm 0mm 0mm;
+}
+.line__label {
+  color: #000;
+}
+.chart__label {
+  color: #000;
+}
+
+.name p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+.name {
+  margin-right: 0%;
+}
