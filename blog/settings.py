@@ -25,15 +25,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', cast=bool, default=False)
+DEBUG = os.getenv('DEBUG')
 print("allowed hosts : ")
 print(os.getenv('ALLOWED_HOSTS'))
 print(os.getenv('env.ALLOWED_HOSTS'))
 print(os.getenv('secrets.ALLOWED_HOSTS'))
 print(os.getenv('DJANGO_SECRET_KEY'))
-print(os.getenv('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')]))
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [
-                       s.strip() for s in v.split(',')])
+print(os.getenv('ALLOWED_HOSTS'))
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 
 # Application definition
 
