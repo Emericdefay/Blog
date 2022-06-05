@@ -23,3 +23,6 @@ coverage = "*"
 
 [requires]
 python_version = "3.9"
+
+[production]
+psycopg2 = "*"
