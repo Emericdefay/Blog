@@ -76,11 +76,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: python-app
-          path: .
-      - name: 'Migrate and statics'
-        run: |
-          python manage.py migrate
-          python manage.py collectstatics    
+          path: . 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
