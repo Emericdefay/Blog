@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from typing import cast
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool, default=False)
+DEBUG = cast(bool, os.getenv('DEBUG'))
 ALLOWED_HOSTS = ['blog-korpo.azurewebsites.net', '127.0.0.1', 'emericdefay.fr']
 
 # Application definition
@@ -88,11 +88,11 @@ if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('DB_NAME'),
-            'USER': os.getenv('DB_USER'),
-            'PASSWORD': os.getenv('DB_PASSWORD'),
-            'HOST': os.getenv('DB_HOST'),
-            'PORT': os.getenv('DB_PORT', cast=int)
+            'NAME': cast(str, os.getenv('DB_NAME')),
+            'USER': cast(str, os.getenv('DB_USER')),
+            'PASSWORD': cast(str, os.getenv('DB_PASSWORD')),
+            'HOST': cast(str, os.getenv('DB_HOST')),
+            'PORT': cast(int, os.getenv('DB_PORT'))
         }
     }
 else:
@@ -170,11 +170,11 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join('http://blog-korpo.azurewebsites.net', 'static')
-    MEDIA_ROOT = os.path.join('http://blog-korpo.azurewebsites.net', 'media')
+    STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static'))
+    MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media'))
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = cast(str, os.path.join(BASE_DIR, 'static'))
+    MEDIA_ROOT = cast(str, os.path.join(BASE_DIR, 'media'))
 
 COMMENT_FLAGS_ALLOWED = 3
 
@@ -194,9 +194,9 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 # EMAIL SERVICE
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = config('EMAIL_PORT')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+DEFAULT_FROM_EMAIL = cast(str, os.getenv('DEFAULT_FROM_EMAIL'))
+EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST'))
+EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER'))
+EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD'))
+EMAIL_PORT = cast(int, os.getenv('EMAIL_PORT'))
+EMAIL_USE_TLS = cast(bool, os.getenv('EMAIL_USE_TLS'))
