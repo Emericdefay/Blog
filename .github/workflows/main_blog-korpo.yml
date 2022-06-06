@@ -34,7 +34,7 @@ jobs:
       REPO_URL: ${{secrets.REPO_URL}}
       STATIC_ROOT: ${{secrets.STATIC_ROOT}}
       USER: ${{secrets.USER}}
-      WEBAPP_NAME: 'Blog'
+      WEBAPP_NAME: 'blog-korpo'
       WORKING_FOLDER: ${{secrets.WORKING_FOLDER}}
 
 
@@ -90,6 +90,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'blog-korpo'
+          app-name: ${{ env.WEBAPP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7E1D4C6293394D8EB6674122897604A6 }}
