@@ -25,8 +25,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = cast(bool, os.getenv('DEBUG'))
-ALLOWED_HOSTS = ['blog-korpo.azurewebsites.net', '127.0.0.1', 'emericdefay.fr']
+DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
+ALLOWED_HOSTS = [
+    'https://blog-korpo.azurewebsites.net',
+    'http://blog-korpo.azurewebsites.net',
+    'blog-korpo.azurewebsites.net',
+    '127.0.0.1',
+    'emericdefay.fr',
+    'localhost',
+]
 
 # Application definition
 
@@ -170,8 +177,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static'))
-    MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media'))
+    STATIC_ROOT = cast(str, os.path.join(BASE_DIR, 'static'))
+    MEDIA_ROOT = cast(str, os.path.join(BASE_DIR, 'media'))
 else:
     STATIC_ROOT = cast(str, os.path.join(BASE_DIR, 'static'))
     MEDIA_ROOT = cast(str, os.path.join(BASE_DIR, 'media'))
@@ -199,4 +206,4 @@ EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST'))
 EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD'))
 EMAIL_PORT = cast(int, os.getenv('EMAIL_PORT'))
-EMAIL_USE_TLS = cast(bool, os.getenv('EMAIL_USE_TLS'))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'False').lower() in ('True', '1', 'true')
