@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'mdeditor',
     'crispy_forms',
     'comment',
-
+    
+    'whitenoise.runserver_nostatic',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -149,18 +152,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-PROJECT_DIR = '/home/site/wwwroot'
-STATIC_DIRS = ()
-# [
-#     os.path.join(BASE_DIR, 'static'),
-#     os.path.join(PROJECT_DIR, 'static'),
-#     '/var/www/static'
-# ]
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    '/var/www/static'
+]
 
-# STATICFILES_FINDERS = (
-#     'django.contrib.staticfiles.finders.FileSystemFinder',
-#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-# )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

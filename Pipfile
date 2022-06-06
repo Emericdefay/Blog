@@ -16,6 +16,7 @@ numpy = "*"
 matplotlib = "*"
 plotly = "*"
 psycopg2 = "*"
+whitenoise = "*"
 
 [dev-packages]
 pycodestyle = "*"
