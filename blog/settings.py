@@ -115,29 +115,23 @@ else:
         }
     }
 
-if not DEBUG:
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'filters': {
-            'require_debug_false': {
-                '()': 'django.utils.log.RequireDebugFalse'
-            }
-        },
-        'handlers': {
-            'logfile': {
-                'class': 'logging.handlers.WatchedFileHandler',
-                'filename': 'D:/home/site/wwwroot/myapp.log'
-            }
-        },
-        'loggers': {
-            'django': {
-                'handlers': ['logfile'],
-                'level': 'ERROR',
-                'propagate': False
-            }
-        }
-    }
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://8f37253f78784ca9b9f8868cc1717b1f@o889839.ingest.sentry.io/6477061",
+    integrations=[DjangoIntegration()],
+
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0,
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

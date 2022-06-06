@@ -17,6 +17,7 @@ matplotlib = "*"
 plotly = "*"
 psycopg2 = "*"
 whitenoise = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 pycodestyle = "*"
