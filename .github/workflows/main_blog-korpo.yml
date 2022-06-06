@@ -21,7 +21,7 @@ jobs:
       DB_USER: ${{secrets.DB_USER}}
       DBHOST: ${{secrets.DBHOST}}
       DBPASS: ${{secrets.DBPASS}}
-      DEBUG: True
+      DEBUG: ${{secrets.DEBUG}}
       DEFAULT_FROM_EMAIL: ${{secrets.DEFAULT_FROM_EMAIL}}
       DJANGO_SECRET_KEY: ${{secrets.DJANGO_SECRET_KEY}}
       EMAIL_HOST: ${{secrets.EMAIL_HOST}}
