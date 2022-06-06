@@ -54,7 +54,7 @@ jobs:
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Tests
-        run: python manage.py test --settings=settings-test
+        run: python manage.py test --settings=blog.settings-test
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
