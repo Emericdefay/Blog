@@ -58,8 +58,6 @@ jobs:
         
       - name: Collect static
         run: python manage.py collectstatic
-      - name: migrate
-        run: python manage.py migrate
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Tests
         run: python manage.py test --settings=blog.setting_test
