@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
+DEBUG = True; os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
 ALLOWED_HOSTS = [
     'https://blog-korpo.azurewebsites.net',
     'http://blog-korpo.azurewebsites.net',
@@ -149,10 +149,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
+PROJECT_DIR = '/home/site/wwwroot'
 STATIC_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(PROJECT_DIR, 'static'),
 ]
 
 STATICFILES_FINDERS = (
