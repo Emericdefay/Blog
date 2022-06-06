@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 if not DEBUG:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': cast(str, os.getenv('DB_NAME')),
             'USER': cast(str, os.getenv('DB_USER')),
             'PASSWORD': cast(str, os.getenv('DB_PASSWORD')),
