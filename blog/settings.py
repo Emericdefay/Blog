@@ -168,24 +168,17 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-
-if not DEBUG:
-    STATIC_ROOT = os.getenv('STATIC_ROOT')
-    MEDIA_ROOT = os.getenv('MEDIA_ROOT')
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    #EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-    #EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_email')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 COMMENT_FLAGS_ALLOWED = 3
 
 COMMENT_SHOW_FLAGGED = True
 
 COMMENT_FLAG_REASONS = [
-    (1, ('Spam | Exist only to promote a service')),
-    (2, ('Abusive | Intended at promoting hatred')),
-    (3, ('Racist | Sick Mentality')),
+    (1, ('Spam | Existe uniquement pour promouvoir un service')),
+    (2, ('Abusif | Haine gratuite')),
+    (3, ('Raciste | Maladie mentale')),
 ]
 
 COMMENT_ALLOW_ANONYMOUS = True
@@ -196,7 +189,6 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 # EMAIL SERVICE
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 EMAIL_HOST = os.getenv('EMAIL_HOST')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
