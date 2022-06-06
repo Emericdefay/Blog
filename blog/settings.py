@@ -148,9 +148,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
 MEDIA_URL = '/media/'
+
 STATIC_DIRS = [
+    os.path.join(BASE_DIR, 'static/'),
     os.path.join(BASE_DIR, 'static'),
 ]
 
@@ -178,8 +179,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     #STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static'))
     #MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media'))
     pass
