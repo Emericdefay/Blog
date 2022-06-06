@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True; os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
+DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
 ALLOWED_HOSTS = [
     'https://blog-korpo.azurewebsites.net',
     'http://blog-korpo.azurewebsites.net',
