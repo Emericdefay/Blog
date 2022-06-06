@@ -47,25 +47,26 @@ INSTALLED_APPS = [
     'crispy_forms',
     'comment',
     
-    'whitenoise.runserver_nostatic',
     
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -182,7 +183,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     #STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static')).replace('\\', '/')
     #MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media')).replace('\\', '/')
