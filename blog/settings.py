@@ -133,7 +133,7 @@ LOGGING = {
         'django': {
             'handlers': ['logfile'],
             'level': 'ERROR',
-            'propagate': False,
+            'propagate': False
         }
     }
 }
