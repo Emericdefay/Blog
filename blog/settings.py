@@ -28,10 +28,9 @@ SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
 ALLOWED_HOSTS = [
-    'https://blog-korpo.azurewebsites.net',
-    'http://blog-korpo.azurewebsites.net',
-    'blog-korpo.azurewebsites.net',
+    '.blog-korpo.azurewebsites.net',
     '127.0.0.1',
+    '1.1.1.1',
     'emericdefay.fr',
     'localhost',
 ]
