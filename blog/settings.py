@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
 from typing import cast
 from decouple import config
 
@@ -92,6 +93,13 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # If you are using different databases for development and production.
 
 if not DEBUG:
+    if 'test' in sys.argv:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
