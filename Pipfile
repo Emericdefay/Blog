@@ -15,7 +15,7 @@ django-comments-dab = "*"
 numpy = "*"
 matplotlib = "*"
 plotly = "*"
-psycopg2-binary = "*"
+psycopg2 = "*"
 
 [dev-packages]
 pycodestyle = "*"
