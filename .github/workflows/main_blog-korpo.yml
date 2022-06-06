@@ -24,6 +24,7 @@ jobs:
       DEBUG: ${{secrets.DEBUG}}
       DEFAULT_FROM_EMAIL: ${{secrets.DEFAULT_FROM_EMAIL}}
       DJANGO_SECRET_KEY: ${{secrets.DJANGO_SECRET_KEY}}
+      DOMAIN_URL: ${{secrets.DOMAIN_URL}}
       EMAIL_HOST: ${{secrets.EMAIL_HOST}}
       EMAIL_HOST_PASSWORD: ${{secrets.EMAIL_HOST_PASSWORD}}
       EMAIL_HOST_USER: ${{secrets.EMAIL_HOST_USER}}
@@ -52,6 +53,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
         
+      - name: Collect static
+        run: python manage.py collectstatic
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Tests
         run: python manage.py test --settings=blog.setting_test
@@ -77,6 +80,11 @@ jobs:
         with:
           name: python-app
           path: . 
+      - name: Disable static collection and set migration command on App Service
+        uses: Azure/appservice-settings@v1
+        with:  
+          app-name: ${{ env.WEBAPP_NAME }}
+          app-settings-json: '[{ "name": "DISABLE_COLLECTSTATIC", "value": "true" }, { "name": "POST_BUILD_COMMAND",  "value": "python manage.py makemigrations && python manage.py migrate" }]'
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
