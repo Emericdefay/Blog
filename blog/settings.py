@@ -157,10 +157,10 @@ STATIC_DIRS = ()
 #     '/var/www/static'
 # ]
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# )
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -181,8 +181,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     #STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static')).replace('\\', '/')
     #MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media')).replace('\\', '/')
     pass

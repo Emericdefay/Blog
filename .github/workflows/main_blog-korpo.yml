@@ -33,9 +33,9 @@ jobs:
       EMAIL_HOST_USER: ${{secrets.EMAIL_HOST_USER}}
       EMAIL_PORT: ${{secrets.EMAIL_PORT}}
       EMAIL_USE_TLS: ${{secrets.EMAIL_USE_TLS}}
-      MEDIA_ROOT: ${{secrets.MEDIA_ROOT}}
+      # MEDIA_ROOT: ${{secrets.MEDIA_ROOT}}
       REPO_URL: ${{secrets.REPO_URL}}
-      STATIC_ROOT: ${{secrets.STATIC_ROOT}}
+      # STATIC_ROOT: ${{secrets.STATIC_ROOT}}
       USER: ${{secrets.USER}}
       WORKING_FOLDER: ${{secrets.WORKING_FOLDER}}
 
