@@ -150,10 +150,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 PROJECT_DIR = '/home/site/wwwroot'
-STATIC_DIRS = [
-    os.path.join(BASE_DIR, 'static/'),
-    os.path.join(PROJECT_DIR, 'static'),
-]
+STATIC_DIRS = ()
+# [
+#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(PROJECT_DIR, 'static'),
+#     '/var/www/static'
+# ]
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -179,10 +181,10 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    #STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static'))
-    #MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media'))
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
+    #STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static')).replace('\\', '/')
+    #MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media')).replace('\\', '/')
     pass
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
