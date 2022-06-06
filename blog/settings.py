@@ -178,8 +178,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'static'))
-    MEDIA_ROOT = cast(str, os.path.join('http://blog-korpo.azurewebsites.net', 'media'))
+    STATIC_ROOT = cast(str, os.path.join(BASE_DIR, 'static'))
+    MEDIA_ROOT = cast(str, os.path.join(BASE_DIR, 'media'))
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
     MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
