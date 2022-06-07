@@ -68,10 +68,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blog.urls'
-CSRF_TRUSTED_ORIGINS=[
-    'https://*.emericdefay.fr'
-    'https://*.blog-korpo.azurewebsites.net'
-    ]
 
 TEMPLATES = [
     {
