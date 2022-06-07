@@ -3,10 +3,31 @@
 {% load markdown_extras %}
 {% load comment_tags %}
 
+{% comment %} META {% endcomment %}
 {% block title %}
 {{ post.title }} - {{ block.super }}
 {% endblock title %}
 
+{% block description %}
+  {{ post.excerpt }}
+{% endblock description %}
+
+{% block keywords %}
+  {{ block.super }}, {% for tag in post.tags.all %}{{ tag|lower }}, {% endfor %}{{ post.slug }}, {{ post.title }}
+{% endblock keywords %}
+
+{% comment %} Extras {% endcomment %}
+{% block extrajs %}
+  <script src="{% static 'js/copy-button.js' %}"></script>
+  <script src="{% static 'js/mermaid.min.js' %}"></script>
+{% endblock extrajs %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'css/codehilite_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+{% endblock extracss %}
+
+{% comment %} Content {% endcomment %}
 {% block content %}
 
   <div class="main">
@@ -37,3 +58,22 @@
   </div>
 
 {% endblock content %}
+
+{% block extrascriptjs %}
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
+  <script>
+    let scrolled = true;
+    $('.out_prompt_overlay').on('click', function () {
+      if (scrolled) {
+        $('.output').removeClass('output_scroll');
+        scrolled = false;
+      } else {
+          $('.output').addClass('output_scroll');
+          scrolled = true;
+      };
+    })
+  </script>
+{% endblock extrascriptjs %}

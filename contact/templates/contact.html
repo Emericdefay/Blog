@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% comment %} META {% endcomment %}
 {% block title %}
-{{ post.title }}Contact - {{ block.super }}
+  Contact - {{ block.super }}
 {% endblock title %}
 
+{% block description %}Formulaire de contact.{% endblock description %}
+
+{% block keywords %}{{ block.super }}, contact, message, mail, contactez-nous, contacter, contrat, mission{% endblock keywords %}
+
+{% comment %} Extras {% endcomment %}
+{% block extrajs %}
+{% endblock extrajs %}
+
+{% block extracss %}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock extracss %}
+
+{% comment %} Content {% endcomment %}
 {% block content %}
-<head>
-    <meta charset="UTF-8">
-    <title>Ben Crabtree's Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-</head>
 <section id="contact">
   
     <h1 class="section-header">Contact</h1>

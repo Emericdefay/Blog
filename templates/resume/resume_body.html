@@ -2,28 +2,43 @@
 {% load static %}
 {% load markdown_extras %}
 {% load comment_tags %}
-
+{% comment %} META {% endcomment %}
 {% block title %}
-Emeric Defay - {{ block.super }}
+  Emeric Defay - {{ block.super }}
 {% endblock title %}
 
-{% block content %}
+{% block description %}Mon résumé pour celles et ceux qui veulent me contacter pour un contrat ou une mission.{% endblock description %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% block keywords %}{{ block.super }}, resume, curriculum vitae, compétences, compétence, skills, experience, contrat, mission{% endblock keywords %}
+
+{% block preload %}
+{{ block.super }}
+  <link rel="preload" href="{% static "img/emeric.jpg" %}" as="image" importance="high">
+  <link rel="preload" href="{% static "img/devpy.png" %}" as="image" importance="high">
+  <link rel="preload" href="{% static "img/logo_actif.png" %}" as="image" importance="high">
+  <link rel="preload" href="{% static "img/logo_elephants.png" %}" as="image" importance="high">
+{% endblock preload %}
+
+{% comment %} Extras {% endcomment %}
+{% block extrajs %}
+{% endblock extrajs %}
+
+{% block extracss %}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/resume_style.css' %}">
   <link rel="stylesheet" media="print" href="{% static 'css/resume_style_print.css' %}">
-</head>
+{% endblock extracss %}
+
+{% comment %} Content {% endcomment %}
+{% block content %}
 
 <section>
   <div class="page">
     <div class="upper-quarter">
       <div class="content container">
         <div class="contact-me row" id="contact-me">
-          <img class="logo col col-xl-6 col-lg-6 col-md-6 col-sm-12" src="{% static "img/emeric.jpg" %}">
-          <div class='name col col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+          <img class="logo col col-xl-6 col-lg-6 col-md-6 col-sm-6" loading="lazy" src="{% static "img/emeric.jpg" %}">
+          <div class='name col col-xl-6 col-lg-6 col-md-6 col-sm-6'>
             <h1>Emeric DEFAY</h1>
             <h3>Data Scientist</h3>
             <h3 class="slash">/</h3>
@@ -243,7 +258,7 @@ Emeric Defay - {{ block.super }}
           </div>
           <div class="deaf">
             <div class="deaf-text">
-              <h3>◽ Interpréteur de Musique pour les sourds</h3>
+              <h3>◽ Interpréteur de Musique pour les malentendants</h3>
             </div>
           </div>
           <div class="bot">

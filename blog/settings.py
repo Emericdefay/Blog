@@ -29,9 +29,9 @@ SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
 ALLOWED_HOSTS = [
     '.blog-korpo.azurewebsites.net',
+    '.emericdefay.fr',
     '127.0.0.1',
     '1.1.1.1',
-    'emericdefay.fr',
     'localhost',
 ]
 
@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'mdeditor',
     'crispy_forms',
     'comment',
-    
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -69,6 +68,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blog.urls'
+CSRF_TRUSTED_ORIGINS=[
+    'https://*.emericdefay.fr'
+    'https://*.blog-korpo.azurewebsites.net'
+    ]
 
 TEMPLATES = [
     {

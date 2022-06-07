@@ -10,10 +10,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8" />
+    <meta http-equiv = "Content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <meta name="description" content="{% block description %}Découvrons les subtilités de Django, la puissance du Machine Learning. Un blog qui se veut zen et ludique.{% endblock description %}">
+    <meta name="keywords" content="{% block keywords %}développeur, python, django, emeric, defay, blog, machine learning, openclassrooms, medium, sklearn{% endblock keywords %}">
     <title>{% block title %}Dev.py{% endblock title %}</title>
-
+    <meta rel="canonical" href="{{ request.get_full_path }}">
+    <meta property="og:url" content="{{ request.build_absolute_uri  }}">
+    <meta property="og:type" content="text/html">
+    <meta property="og:title" content="Dev.py">
+    <meta property="og:description" content="Découvrons les subtilités de Django, la puissance du Machine Learning. Un blog qui se veut zen et ludique.">
+    <meta property="og:image" content="{% static 'img/thumbnail.png' %}">
+    <link rel="preload" as="image" href="{% static 'img/thumbnail.png' %}">
+    {% block preload %}
+    {% endblock preload %}
   </head>
 
   <body>
@@ -68,9 +79,24 @@
     </div>
     {% endif %}
 
-    
-    
     <canvas class="d-print-none" id="bgCanvas"></canvas>
+
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script src="{% static 'js/background.js' %}"></script>
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darktheme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/background.css' %}">
+    {% block extracss %}
+    {% endblock extracss %}
+
     <div class="d-print-none cloud large cloud-1"><div></div><div></div><div></div><div></div></div>
     <div class="d-print-none cloud normal cloud-2"><div></div><div></div><div></div><div></div></div>
     <div class="d-print-none cloud small cloud-3"><div></div><div></div><div></div><div></div></div>
@@ -84,45 +110,17 @@
     <div class="d-print-none cloud tiny cloud-11"><div></div><div></div><div></div><div></div></div>
     <div class="d-print-none cloud small cloud-12"><div></div><div></div><div></div><div></div></div>
 
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/theme.js' %}"></script>
-    <script src="{% static 'js/copy-button.js' %}"></script>
-    <script src="{% static 'js/background.js' %}"></script>
-    <script src="{% static 'js/mermaid.min.js' %}"></script>
-
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/codehilite_styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/output.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/darktheme.css' %}">
-    <link rel="stylesheet" href="{% static 'css/background.css' %}">
-
     <div class="container container-content my-3">
       {% block content %}
       
       {% endblock content %}
     </div>
+    {% block extrajs %}
+    {% endblock extrajs %}
+    {% block extrascriptjs %}
+    {% endblock extrascriptjs %}
+    
 
-
-    <script>
-      mermaid.initialize({ startOnLoad: true });
-    </script>
-
-    <script>
-      let scrolled = true;
-      $('.out_prompt_overlay').on('click', function () {
-        if (scrolled) {
-          $('.output').removeClass('output_scroll');
-          scrolled = false;
-        } else {
-            $('.output').addClass('output_scroll');
-            scrolled = true;
-        };
-      })
-    </script>
 
   </body>
   <footer class="bg-dark py-3 d-print-none">
