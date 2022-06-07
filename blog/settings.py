@@ -40,6 +40,18 @@ CSRF_TRUSTED_ORIGINS=[
     'https://*.blog-korpo.azurewebsites.net'
 ]
 
+# CORS_ALLOWED_ORIGINS = [
+#     "https://emericdefay.fr",
+#     "https://blog-korpo.azurewebsites.net",
+#     "http://localhost:8000",
+#     "http://127.0.0.1:9000"
+# ]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://\w+\.emericdefay\.fr$",
+    r"^https://\w+\.blog-korpo.azurewebsites\.net$",
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +62,7 @@ INSTALLED_APPS = [
     'mdeditor',
     'crispy_forms',
     'comment',
+    'corsheaders',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -65,6 +78,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

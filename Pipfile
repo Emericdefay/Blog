@@ -18,6 +18,7 @@ plotly = "*"
 psycopg2 = "*"
 whitenoise = "*"
 sentry-sdk = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 pycodestyle = "*"
