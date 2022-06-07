@@ -1,7 +1,7 @@
 /* Variables */
 :root{
   --main-bg-color: transparent; 
-  --head-bg-color: rgb(67 120 126 / 25%);
+  --head-bg-color: rgb(27 84 90 / 45%);
   --block-bg-color: #b4d4d3e6; 
   --bg-skill-color: #43787e; 
   --text-title-plain-color: #ffffff; 
@@ -113,7 +113,7 @@ h4 {
 
 .upper-quarter h3 {
   font-family: 'Open Sans';
-  font-weight: 300;
+  font-weight: 600;
   font-size: 12pt;
   color: #FFF;
 }
@@ -137,7 +137,7 @@ h4 {
 
 .contact-me {
   padding-top: 0px;
-  display: block;
+  /* display: flex; */
   margin: 0 !important;
   padding-top: 50px 40px;
   max-width: 1125px;
@@ -341,7 +341,7 @@ h4 {
 
 .personal-experience h3 {
   font-family: 'Open Sans';
-  font-weight: 300;
+  font-weight: normal;
   font-size: 12pt;
   width: 100%;
   padding-bottom: 5px;
@@ -458,7 +458,7 @@ h4 {
 .skills li {
   list-style-type: none;
   font-family: 'Open Sans';
-  font-weight: 300;
+  font-weight: 500;
   font-size: 12pt;
   color: #FFF;
   background-color: var(--lines-bg-color);
@@ -500,7 +500,7 @@ h4 {
 .traits-hobbies li {
   list-style-type: none;
   font-family: 'Open Sans';
-  font-weight: 300;
+  font-weight: 500;
   font-size: 12pt;
   /* padding-left: 20px; */
   padding-right: 20px;
@@ -618,7 +618,7 @@ h4 {
     }
     .skills li {
       font-family: 'Open Sans';
-      font-weight: 300;
+      font-weight: 500;
       font-size: 12pt;
       color: #FFF;
       background-color: var(--lines-bg-color);
@@ -655,7 +655,7 @@ h4 {
       }
       .skills li {
         font-family: 'Open Sans';
-        font-weight: 300;
+        font-weight: 500;
         font-size: 12pt;
         color: #FFF;
         background-color: var(--lines-bg-color);
@@ -694,7 +694,7 @@ h4 {
         }
         .skills li {
           font-family: 'Open Sans';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 12pt;
           color: #FFF;
           background-color: var(--lines-bg-color);
@@ -715,7 +715,7 @@ h4 {
         }
         .skills li {
           font-family: 'Open Sans';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 12pt;
           color: #FFF;
           background-color: var(--lines-bg-color);
@@ -736,7 +736,7 @@ h4 {
         }
         .skills li {
           font-family: 'Open Sans';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 12pt;
           color: #FFF;
           background-color: var(--lines-bg-color);
@@ -757,7 +757,7 @@ h4 {
         }
         .skills li {
           font-family: 'Open Sans';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 12pt;
           color: #FFF;
           background-color: var(--lines-bg-color);
@@ -781,7 +781,7 @@ h4 {
         }
         .skills li {
           font-family: 'Open Sans';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 12pt;
           color: #FFF;
           background-color: var(--lines-bg-color);
@@ -805,7 +805,7 @@ h4 {
         }
         .skills li {
           font-family: 'Open Sans';
-          font-weight: 300;
+          font-weight: 500;
           font-size: 12pt;
           color: #FFF;
           background-color: var(--lines-bg-color);
@@ -836,13 +836,13 @@ h4 {
       }
       @media (max-height: 920px) {
         .upper-quarter {
-          height: 360px;
+          height: 460px;
         }
       }
 
       @media (max-height: 900px) {
         .upper-quarter {
-          height: 330px;
+          height: 460px;
         }
       }
       @media (max-height: 870px) {

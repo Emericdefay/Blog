@@ -89,11 +89,12 @@ function Terrain(options) {
     this.terrain.height = height;
     this.fillStyle = options.fillStyle || montain1Color;
     this.mHeight = options.mHeight || height;
+    this.displacementFactor = options.displacementFactor || 0.6;
 
     // generate
     this.points = [];
 
-    var displacement = options.displacement || 140,
+    var displacement = options.displacement || 200,
         power = Math.pow(2, Math.ceil(Math.log(width) / (Math.log(2))));
 
     // set the start height and end height for the terrain
@@ -105,7 +106,7 @@ function Terrain(options) {
         for (var j = (power / i) / 2; j < power; j += power / i) {
             this.points[j] = ((this.points[j - (power / i) / 2] + this.points[j + (power / i) / 2]) / 2) + Math.floor(Math.random() * -displacement + displacement);
         }
-        displacement *= 0.6;
+        displacement *= this.displacementFactor;
     }
 
     document.body.appendChild(this.terrain);
@@ -212,9 +213,9 @@ for (var i = 0; i < height; i++) {
 
 stars1 = new ShootingStar();
 stars2 = new ShootingStar();
-montain1 = new Terrain({mHeight : (height/2)-120, fillStyle : montain1Color});
-montain2 = new Terrain({displacement : 120, scrollDelay : 50, fillStyle : montain2Color, mHeight : (height/2)-60});
-montain3 = new Terrain({displacement : 100, scrollDelay : 20, fillStyle : montain3Color, mHeight : height/2});
+montain1 = new Terrain({displacementFactor : 0.5, mHeight : (height/2)-120, fillStyle : montain1Color});
+montain2 = new Terrain({displacementFactor : 0.65, displacement : 120, scrollDelay : 50, fillStyle : montain2Color, mHeight : (height/2)-60});
+montain3 = new Terrain({displacementFactor : 0.7, displacement : 100, scrollDelay : 20, fillStyle : montain3Color, mHeight : height/2});
 
 entities.push(stars1);
 entities.push(stars2);

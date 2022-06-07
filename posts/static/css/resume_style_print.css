@@ -27,7 +27,7 @@ canvas {
 html {
   height: 297mm;
 }
-h4, h3, li, h1, h2, p {
+h4, h3, li, h1, h2, p, .name h1, .name h3 {
   color: #000;
 }
 .experience, .education {
