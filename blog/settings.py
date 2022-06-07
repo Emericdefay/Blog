@@ -103,7 +103,7 @@ if not DEBUG:
             'USER': cast(str, os.getenv('DB_USER')),
             'PASSWORD': cast(str, os.getenv('DB_PASSWORD')),
             'HOST': cast(str, os.getenv('DB_HOST')),
-            'PORT': cast(int, os.getenv('DB_PORT'))
+            'PORT': int(cast(int, os.getenv('DB_PORT')))
         }
     }
 else:
@@ -228,5 +228,5 @@ DEFAULT_FROM_EMAIL = cast(str, os.getenv('DEFAULT_FROM_EMAIL'))
 EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST'))
 EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD'))
-EMAIL_PORT = cast(int, os.getenv('EMAIL_PORT'))
+EMAIL_PORT = int(cast(int, os.getenv('EMAIL_PORT')))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'False').lower() in ('True', '1', 'true')
