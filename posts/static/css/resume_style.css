@@ -16,7 +16,8 @@
   --lines-bg-color: #353b41;
   --linear-bg-color: linear-gradient(to left, #4cb8c4, #3cd3ad);
 
-  --height-lines : 1450px;
+  --height-lines: 1450px;
+  --font-family-title: 'Segoe Print';
 }
 
 [data-theme=light] {
@@ -107,7 +108,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
-  height: 325px;
+  margin-bottom: 5px;
   background-position: 50% 10%;
 }
 
@@ -161,8 +162,13 @@ h4 {
   padding-left: 10px;
   padding-bottom: 2px;
 }
-.name h1, .name h3{
+.name h1, .name h3 {
   color: var(--text-title-trspr-color);
+  font-family: var(--font-family-title);
+}
+
+.resume-title {
+  font-family: var(--font-family-title);
 }
 
 .name h3 {
@@ -189,7 +195,7 @@ h4 {
   margin: auto;
   position: relative;
   display: flow-root;
-  /* padding-bottom: 60px; */
+  padding-bottom: 60px;
 }
 
 .lower-three-quarters h3 {
@@ -204,7 +210,7 @@ h4 {
   margin-left: 3.75%;
   display: inline-block;
   position: relative;
-  top: -90px;
+  /* top: -90px; */
 }
 
 .left-column header {
@@ -214,7 +220,7 @@ h4 {
 }
 
 .left-column h2 {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-weight: 600;
   font-size: 22pt;
   padding-left: 10px;
@@ -357,7 +363,6 @@ h4 {
   display: inline-block;
   float: right;
   position: relative;
-  top: -90px;
 }
 
 .right-column header {
@@ -367,7 +372,7 @@ h4 {
 }
 
 .right-column h2 {
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   font-weight: 600;
   font-size: 22pt;
   padding-left: 10px;
@@ -645,7 +650,6 @@ h4 {
       @media only screen and (max-width: 870px) {
         .upper-quarter {
           background-size: 130%;
-          height: 330px;
         }
         .skills li {
           font-family: 'Open Sans';
@@ -666,7 +670,6 @@ h4 {
       @media only screen and (max-width: 670px) {
         .upper-quarter {
           background-size: 150%;
-          height: 330px;
         }
         .skills li {
           font-family: 'Open Sans';
@@ -687,7 +690,6 @@ h4 {
       @media only screen and (max-width: 580px) {
         .upper-quarter {
           background-size: 170%;
-          height: 330px;
         }
         .skills li {
           font-family: 'Open Sans';
@@ -708,7 +710,6 @@ h4 {
       @media only screen and (max-width: 515px) {
         .upper-quarter {
           background-size: 190%;
-          height: 390px;
         }
         .skills li {
           font-family: 'Open Sans';
@@ -729,7 +730,6 @@ h4 {
       @media only screen and (max-width: 460px) {
         .upper-quarter {
           background-size: 220%;
-          height: 460px;
         }
         .name {
           margin-right: 0%;
@@ -753,7 +753,6 @@ h4 {
       @media only screen and (max-width: 300px) {
         .upper-quarter {
           background-size: 220%;
-          height: 530px;
         }
         .name {
           margin-right: 0%;
@@ -778,7 +777,7 @@ h4 {
   }
 }
 
-@media (max-height: 8000px) {
+/* @media (max-height: 8000px) {
 
   @media (max-height: 1140px) {
 
@@ -807,7 +806,7 @@ h4 {
       }
       @media (max-height: 801px) {
         .upper-quarter {
-          height: 330px;
+          height: 460px;
         }
       }
       @media (max-height: 750px) {
@@ -817,7 +816,7 @@ h4 {
       }
       @media (max-height: 720px) {
         .upper-quarter {
-          height: 330px;
+          height: 460px;
         }
       }
       @media (max-height: 670px) {
@@ -857,7 +856,7 @@ h4 {
       }
     }
   }
-}
+} */
 
 
   @import url(https://fonts.googleapis.com/css?family=Open+Sans);

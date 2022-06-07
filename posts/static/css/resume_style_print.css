@@ -3,6 +3,15 @@
   --skill-bg : #969696;
   --text-texts-plain-color: #000;
 }
+
+html {
+  background-color: transparent;
+}
+
+.experience a {
+  color: #000;
+}
+
 .skills {
   width: 99.8%;
   max-width: 960px;
@@ -78,7 +87,7 @@ h4, h3, li, h1, h2, p, .name h1, .name h3 {
   border: 2px solid #fff;
   background-color: #ffffff;
 }
-.personal-experience h3 {
+.personal-experience h3, .personal-experience h2 {
   color: #000;
 }
 
@@ -88,8 +97,13 @@ h4, h3, li, h1, h2, p, .name h1, .name h3 {
   max-width: 50% !important;
 }
 
+
 .upper-quarter {
-  height: 330px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  margin-bottom: 5px;
+  background-position: 50% 10%;
 }
 
 .plain-title {

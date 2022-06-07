@@ -18,11 +18,16 @@
     <title>{% block title %}Dev.py{% endblock title %}</title>
     <meta rel="canonical" href="{{ request.get_full_path }}">
     <meta property="og:url" content="{{ request.build_absolute_uri  }}">
-    <meta property="og:type" content="text/html">
-    <meta property="og:title" content="Dev.py">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Dev.py - Blog pour développeur Django/Machine Learning">
     <meta property="og:description" content="Découvrons les subtilités de Django, la puissance du Machine Learning. Un blog qui se veut zen et ludique.">
-    <meta property="og:image" content="{% static 'img/thumbnail.png' %}">
-    <link rel="preload" as="image" href="{% static 'img/thumbnail.png' %}">
+    <meta property="og:image" content="{{ request.scheme }}://{{request.META.HTTP_HOST}}{% block thumbnail_img %}{% static 'img/thumbnail.png' %}{% endblock thumbnail_img %}">
+    <meta property="og:site_name" content="Emericdefay">
+    <meta name="twitter:image:alt" content="Développeur Django et Machine Learning">
+    <meta name="twitter:site" content="@EmericDefay">
+    <meta name="twitter:card" content="{{ request.scheme }}://{{request.META.HTTP_HOST}}{% static 'img/thumbnail.png' %}">
+
+    <!--Preloading needed images -->
     {% block preload %}
     {% endblock preload %}
   </head>
