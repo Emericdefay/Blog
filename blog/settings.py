@@ -99,10 +99,10 @@ if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': cast(str, os.getenv('DB_NAME')).replace('\"', ""),
-            'USER': cast(str, os.getenv('DB_USER')).replace('\"', ""),
-            'PASSWORD': cast(str, os.getenv('DB_PASSWORD')).replace('\"', ""),
-            'HOST': cast(str, os.getenv('DB_HOST')).replace('\"', ""),
+            'NAME': cast(str, os.getenv('DB_NAME')),
+            'USER': cast(str, os.getenv('DB_USER')),
+            'PASSWORD': cast(str, os.getenv('DB_PASSWORD')),
+            'HOST': cast(str, os.getenv('DB_HOST')),
             'PORT': cast(int, os.getenv('DB_PORT'))
         }
     }
@@ -224,9 +224,9 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 # EMAIL SERVICE
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = cast(str, os.getenv('DEFAULT_FROM_EMAIL')).replace('\"', "")
-EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST')).replace('\"', "")
-EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER')).replace('\"', "")
-EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD')).replace('\"', "")
+DEFAULT_FROM_EMAIL = cast(str, os.getenv('DEFAULT_FROM_EMAIL'))
+EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST'))
+EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER'))
+EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD'))
 EMAIL_PORT = cast(int, os.getenv('EMAIL_PORT'))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'False').lower() in ('True', '1', 'true')
