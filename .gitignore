@@ -151,3 +151,8 @@ Thumbs.db #thumbnail cache on Windows
 
 # profiling data
 .prof
+
+# certificates
+*.key
+*.crt
+*.pfx

@@ -35,6 +35,11 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
+CSRF_TRUSTED_ORIGINS=[
+    'https://*.emericdefay.fr'
+    'https://*.blog-korpo.azurewebsites.net'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
