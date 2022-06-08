@@ -36,9 +36,9 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS=[
-    'https://emericdefay.fr'
-    'https://*.emericdefay.fr'
-    'https://*.blog-korpo.azurewebsites.net'
+    'https://emericdefay.fr',
+    'https://*.emericdefay.fr',
+    'https://*.blog-korpo.azurewebsites.net',
 ]
 
 CORS_ALLOWED_ORIGINS = [
