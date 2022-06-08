@@ -40,17 +40,15 @@ CSRF_TRUSTED_ORIGINS=[
     'https://*.blog-korpo.azurewebsites.net'
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "https://emericdefay.fr",
-#     "https://blog-korpo.azurewebsites.net",
-#     "http://localhost:8000",
-#     "http://127.0.0.1:9000"
-# ]
-
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://\w+\.emericdefay\.fr$",
-    r"^https://\w+\.blog-korpo.azurewebsites\.net$",
+CORS_ALLOWED_ORIGINS = [
+    "https://emericdefay.fr",
+    "https://*.emericdefay.fr",
+    "https://blog-korpo.azurewebsites.net",
+    "https://*.blog-korpo.azurewebsites.net",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
 ]
+
 
 # Application definition
 
@@ -63,7 +61,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'comment',
     'corsheaders',
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
