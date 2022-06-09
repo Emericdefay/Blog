@@ -37,9 +37,9 @@
   <div class="page">
     <div class="upper-quarter">
       <div class="content container">
-        <div class="contact-me row" id="contact-me">
-          <img class="logo col col-xl-6 col-lg-6 col-md-6 col-sm-6" loading="lazy" src="{% static "img/emeric.jpg" %}">
-          <div class='name col col-xl-6 col-lg-6 col-md-6 col-sm-6'>
+        <div class="contact-me row row-cols-2" id="contact-me">
+          <img class="logo col" loading="lazy" src="{% static "img/emeric.jpg" %}">
+          <div class='name col'>
             <h1>Emeric DEFAY</h1>
             <h3>Data Scientist</h3>
             <h3 class="slash">/</h3>
@@ -71,8 +71,8 @@
                 <h4><a href="/">Création de sites web et outils en Python</a></h4>
                 <h4>Juin 2022 - Aujourd'hui</h4>
               </div>
-              <div class="col experience-logo">
-                <img class="actif-logo d-print-none" src="{% static "img/logo-devpy.png" %}">
+              <div class="col-4 experience-logo d-print-none">
+                <img class="actif-logo" src="{% static "img/logo-devpy.png" %}">
               </div>
             </div></div>
             <ul>
@@ -83,13 +83,13 @@
           </div>
           <div class="cci">
             <!-- bold -->
-            <div class="container"><div class="row row-cols-2">
-              <div class="col-8">
+            <div class="container"><div class="row row-cols-auto">
+              <div class="col">
                 <h3>Restaurant Les Elephants</h3>
                 <h4><a href="https://github.com/Emericdefay/Elephants" target="_blank">Outil de gestion de commandes</a></h4>
                 <h4>Mars 2022 - Juin 2022</h4>
               </div>
-              <div class="col experience-logo">
+              <div class="col experience-logo d-print-none">
                 <img class="actif-logo d-print-none" src="{% static "img/logo_elephants.png" %}">
               </div>
             </div></div>
@@ -101,14 +101,14 @@
           </div>
           <div class="cci">
             <!-- bold -->
-            <div class="container"><div class="row row-cols-2">
-              <div class="col-8">
+            <div class="container"><div class="row row-cols-auto">
+              <div class="col">
                 <h3>CCI Savoie</h3>
                 <h4><a href="https://portail.actif-cci.fr/" target="_blank">ACTIF - portail de l'économie circulaire</a></h4>
                 <h4>Janvier 2022 - Juin 2022</h4>
               </div>
-              <div class="col experience-logo">
-                <img class="actif-logo d-print-none" src="{% static "img/logo_actif.png" %}">
+              <div class="col experience-logo d-print-none">
+                <img class="actif-logo" src="{% static "img/logo_actif.png" %}">
               </div>
             </div></div>
             <ul>
@@ -166,7 +166,7 @@
               <h4>2020 - 2021</h4>
             </div>
           </div>
-          <div class="ed-info">
+          <div class="ed-info d-print-none">
             <div class="info">
               <h3>CERUS Casino</h3>
               <h4>Bac Croupier de table</h4>
@@ -180,14 +180,14 @@
               <h4>2018 - 2019</h4>
             </div>
           </div>
-          <div class="ed-info">
+          <div class="ed-info d-print-none">
             <div class="info">
               <h3>Telecom Physique Strasbourg</h3>
               <h4>Bac+3 Ingénieur TI-Santé </h4>
               <h4>2016 - 2017</h4>
             </div>
           </div>
-          <div class="ed-info">
+          <div class="ed-info d-print-none">
             <div class="info">
               <h3>Lycée Henri Parriat</h3>
               <h4>Bac+2 CPGE TSI </h4>
@@ -274,7 +274,7 @@
         <div class="skills">
           <ul class="lines">
               <li class="line l--0">
-                <span class="line__label titled-print-block d-none d-sm-block">
+                <span class="line__label title d-print-none d-none d-sm-block">
                   Niveau:
                 </span>
                 <span class="line__label title d-sm-none d-print-none">
@@ -282,7 +282,7 @@
                 </span>
               </li>
               <li class="line l--25">
-                <span class="line__label d-none d-sm-block d-print-block">
+                <span class="line__label d-none d-sm-block d-print-none">
                   Basique
                 </span>
                 <span class="line__label d-sm-none d-print-none">
@@ -290,7 +290,7 @@
                 </span>
               </li>
               <li class="line l--50">
-                <span class="line__label d-none d-sm-block d-print-block">
+                <span class="line__label d-none d-sm-block d-print-none">
                   Avancé
                 </span>
                 <span class="line__label d-sm-none d-print-none">
@@ -298,7 +298,7 @@
                 </span>
               </li>
               <li class="line l--75">
-                <span class="line__label d-none d-sm-block d-print-block">
+                <span class="line__label d-none d-sm-block d-print-none">
                   Maitrise
                 </span>
                 <span class="line__label d-sm-none d-print-none">
@@ -306,7 +306,7 @@
                 </span>
               </li>
               <li class="line l--100">
-                <span class="line__label d-none d-sm-block d-print-block">
+                <span class="line__label d-none d-sm-block d-print-none">
                   Expert
                 </span>
                 <span class="line__label d-sm-none d-print-none">
@@ -401,7 +401,7 @@
               </li>
             </ul>
           </div>
-          <div class="chart chart--prod">
+          <div class="chart chart--prod d-print-none">
             <span class="chart__title">Productivité</span>
             <ul class="chart--horiz">
               <li class="chart__bar" style="width: 70%;">

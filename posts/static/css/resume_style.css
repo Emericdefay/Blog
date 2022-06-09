@@ -139,6 +139,7 @@ h4 {
 .contact-me {
   padding-top: 0px;
   /* display: flex; */
+  place-content: center;
   margin: 0 !important;
   padding-top: 50px 40px;
   max-width: 1125px;
@@ -953,4 +954,3 @@ h4 {
       opacity: 1;
     }
   }
-}
