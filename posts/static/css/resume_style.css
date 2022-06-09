@@ -6,6 +6,7 @@
   --bg-skill-color: #43787e; 
   --text-title-plain-color: #ffffff; 
   --text-texts-plain-color: #323232; 
+  --text-texts-head-plain-color: #bddfde;; 
   --text-links-plain-color: #1562b7; 
   --text-title-trspr-color: #343a40; 
   --text-texts-trspr-color: #ffffff; 
@@ -17,7 +18,7 @@
   --linear-bg-color: linear-gradient(to left, #4cb8c4, #3cd3ad);
 
   --height-lines: 1450px;
-  --font-family-title: 'Segoe Print';
+  --font-family-title: 'Satisfy', 'Courgette', 'Segoe Print', 'Caveat';
 }
 
 [data-theme=light] {
@@ -25,8 +26,8 @@
   --head-bg-color: rgb(67 120 126 / 25%);
   --block-bg-color: #bddfded6;
   --bg-skill-color: #43787e; 
-  --text-title-plain-color: #ffffff; 
-  --text-texts-plain-color: #323232; 
+  --text-title-plain-color: #343a40;; 
+  --text-texts-head-plain-color: #bddfde; 
   --text-links-plain-color: #1562b7; 
   --text-title-trspr-color: #343a40; 
   --text-texts-trspr-color: #ffffff; 
@@ -45,6 +46,8 @@
   --text-title-plain-color: #ffffff; 
   --text-texts-plain-color: #e1e1e1; 
   --text-links-plain-color: #6fadff; 
+  --text-texts-head-plain-color: #110e19; 
+
   --text-title-trspr-color: #ffffff; 
   --text-texts-trspr-color: #ffffff; 
   --text-links-trspr-color: #6fadff;
@@ -68,7 +71,7 @@ h1:not(.nav-title) {
   color: var(--text-title-plain-color);
 }
 .cci {
-  color: var(--text-texts-plain-color)
+  color: var(--text-texts-plain-color);
 }
 
 .personal-experience, .traits-hobbies {
@@ -374,9 +377,11 @@ h4 {
 
 .right-column h2 {
   /* font-family: 'Open Sans'; */
+  margin-bottom: 0px;
   font-weight: 600;
   font-size: 22pt;
   padding-left: 10px;
+  color: var(--text-texts-head-plain-color);
 }
 
 .education {
@@ -398,8 +403,8 @@ h4 {
 }
 
 .ed-info {
-  margin-bottom: 10px;
-     margin-top: 10px;
+  margin-bottom: 2px;
+  margin-top: 10px;
   margin-left: 15px;
   width: 100%;
 }

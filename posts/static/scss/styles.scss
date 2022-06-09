@@ -8,6 +8,21 @@
 // @import "resume_style";
 
 @font-face {
+	font-family: 'Caveat';
+	src: url(../fonts/Caveat-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: 'Satisfy';
+	src: url(../fonts/Satisfy-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Courgette';
+	src: url(../fonts/Courgette-Regular.ttf);
+}
+
+@font-face {
 	font-family: "PT-Sans-Bold";
 	src: url(../fonts/PT_Sans-Web-Bold.ttf);
 }
@@ -29,6 +44,10 @@ body {
 	min-width: fit-content;
 	display: contents;
 
+}
+
+.nav-title {
+	font-family: 'Satisfy', 'Courgette', 'Segoe Print', 'Caveat';
 }
 
 .alt-send-button {
