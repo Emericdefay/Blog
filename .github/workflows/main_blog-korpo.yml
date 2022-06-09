@@ -52,12 +52,11 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
-      - name: NodeTool
-        inputs:
-          versionSpec: 18.x
-        run: |
-          npm install
-          npm run build
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run build
       
       - name: Install dependencies
         run: pip install -r requirements.txt
