@@ -1,0 +1,118 @@
+
+:root {
+  --skill-bg : #969696;
+  --text-texts-plain-color: #000;
+}
+
+html {
+  background-color: transparent;
+}
+
+.experience a {
+  color: #000;
+}
+
+.skills {
+  width: 99.8%;
+  max-width: 960px;
+  display: flex;
+  height: 780px;
+  position: relative;
+  flex-direction: column;
+}
+.line__label {
+  bottom: 780px;
+}
+canvas {
+  display: none;
+}
+.optionnal-traits {
+  display: none;
+}
+.chart--dev{
+  display: none;
+}
+
+html {
+  height: 297mm;
+}
+h4, h3, li, h1, h2, p, .name h1, .name h3 {
+  color: #000;
+}
+.experience, .education {
+  background-color: #ebebeb;
+} 
+@page {
+  margin: 0mm 0mm 0mm 0mm;
+}
+.line__label {
+  color: #000;
+}
+.chart__label {
+  color: #000;
+}
+.chart__title {
+  color: #000;
+}
+.skills li {
+  list-style-type: none;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 12pt;
+  color: #000;
+  background-color: var(--skill-bg);
+  /* padding: 12px 60px 12px 30px; */
+  margin-left: -2px;
+  margin-bottom: 8px;
+}
+.chart__bar {
+  background: linear-gradient(to left, #767676, #b5b5b5);
+}
+
+.name p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+.name {
+  margin-right: 0%;
+}
+
+.personal-experience {
+  margin-bottom: 25px;
+  border: 2px solid #fff;
+  background-color: #ffffff;
+}
+.personal-experience header {
+  margin-bottom: 5px;
+  border: 2px solid #fff;
+  background-color: #ffffff;
+}
+.personal-experience h3, .personal-experience h2 {
+  color: #000;
+}
+
+.col-sm-12 {
+  -ms-flex: 0 0 50% !important;
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+}
+
+
+.upper-quarter {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  margin-bottom: 5px;
+  background-position: 50% 10%;
+}
+
+.plain-title {
+  color: #000;
+}
+
+.right-column header {
+  margin-left: -2px;
+  background-color: var(--skill-bg);
+  padding: 10px;
+}
+

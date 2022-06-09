@@ -16,6 +16,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     env:
       ALLOWED_HOSTS: ${{secrets.ALLOWED_HOSTS}}
       DB_HOST: ${{secrets.DB_HOST}}
@@ -42,7 +43,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - task: NodeTool@0 
+        inputs:
+          versionSpec: $(node_version)
 
+      - script: npm install
+      - script: npm run build
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:

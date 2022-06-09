@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% load markdown_extras %}
 
+{% comment %} Extras {% endcomment %}
+{% block extrajs %}
+  <script src="{% static 'js/copy-button.js' %}"></script>
+  <script src="{% static 'js/mermaid.min.js' %}"></script>
+{% endblock extrajs %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'css/codehilite_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+{% endblock extracss %}
+
 {% block content %}
 
   <h3>Post Preview</h3>
