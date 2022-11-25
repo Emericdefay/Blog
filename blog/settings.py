@@ -195,7 +195,7 @@ USE_TZ = True
 # MEDIA_URL = '/media/'
 STATIC_URL = cast(str, os.getenv('STATIC_URL', '/static/'))
 MEDIA_URL = cast(str, os.getenv('MEDIA_URL', '/media/'))
-STATIC_DIRS = [
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     cast(str, os.getenv('STATIC_DIRS', os.path.join(BASE_DIR, 'static'))),
 
