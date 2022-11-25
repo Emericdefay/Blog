@@ -29,21 +29,21 @@ SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
 DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
 ALLOWED_HOSTS = [
     '.blog-korpo.azurewebsites.net',
-    '.emericdefay.fr',
+    '.emericdefay.com',
     '127.0.0.1',
     '1.1.1.1',
     'localhost',
 ]
 
 CSRF_TRUSTED_ORIGINS=[
-    'https://emericdefay.fr',
-    'https://*.emericdefay.fr',
+    'https://emericdefay.com',
+    'https://*.emericdefay.com',
     'https://*.blog-korpo.azurewebsites.net',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://emericdefay.fr",
-    "https://*.emericdefay.fr",
+    "https://emericdefay.com",
+    "https://*.emericdefay.com",
     "https://blog-korpo.azurewebsites.net",
     "https://*.blog-korpo.azurewebsites.net",
     "http://localhost:8000",
@@ -191,6 +191,9 @@ STATIC_DIRS = [
     '/var/www/static'
 ]
 
+print(STATIC_URL)
+print(STATIC_DIRS)
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -216,8 +219,10 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
     pass
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
