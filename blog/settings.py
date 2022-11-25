@@ -233,8 +233,8 @@ if not DEBUG:
     #MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
     #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    STATIC_ROOT = cast(str, os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'staticfiles')))
-    MEDIA_ROOT = cast(str, os.getenv('MEDIA_ROOT', os.path.join(BASE_DIR, 'media')))
+    STATIC_ROOT = cast(str, os.path.join(BASE_DIR, os.getenv('STATIC_ROOT')), 'staticfiles')
+    MEDIA_ROOT = cast(str, os.path.join(BASE_DIR, os.getenv('MEDIA_ROOT')), 'media')
     pass
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
