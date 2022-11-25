@@ -7,10 +7,21 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from posts.forms import PostCreateForm
 from posts.models import Post, Tag
 
+from typing import cast
+import os
+from django.contrib.auth.models import User
 
 class PostListView(ListView):
     model = Post
     template_name = 'posts/post_list.html'
+    if not User.objects.filter(is_superuser=True).first():
+        user = User.objects.create(
+            username = cast(str, os.getenv('USER_ADMIN')),
+            email = cast(str, os.getenv('EMAIL_ADMIN')),
+            is_superuser = True,
+        )
+        user.cast(str, os.getenv('PASSW_ADMIN'))
+        user.save()
 
 
 class PostDetailView(DetailView):

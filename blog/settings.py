@@ -255,13 +255,3 @@ EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD'))
 EMAIL_PORT = int(cast(int, os.getenv('EMAIL_PORT')))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'False').lower() in ('True', '1', 'true')
-
-from django.contrib.auth.models import User
-if not User.objects.filter(is_superuser=True).first():
-    user = User.objects.create(
-        username = cast(str, os.getenv('USER_ADMIN')),
-        email = cast(str, os.getenv('EMAIL_ADMIN')),
-        is_superuser = True,
-    )
-    user.cast(str, os.getenv('PASSW_ADMIN'))
-    user.save()
