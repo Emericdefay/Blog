@@ -17,6 +17,7 @@ urlpatterns = [
     # path(".well-known/pki-validation/EC523B3318EF62A7C00C36E8629DF486.txt", security_txt),
 ]
 
-if settings.DEBUG:
+# if settings.DEBUG:
+if True:
     urlpatterns += static(settings.MEDIA_URL,
                       document_root=settings.MEDIA_ROOT)
