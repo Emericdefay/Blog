@@ -14,13 +14,11 @@ from django.contrib.auth.models import User
 class PostListView(ListView):
     model = Post
     template_name = 'posts/post_list.html'
-    user = User.objects.create(
-        username = cast(str, os.getenv('USER_ADMIN')),
-        email = cast(str, os.getenv('EMAIL_ADMIN')),
-        is_superuser = True,
-    )
-    user.set_password(cast(str, os.getenv('PASSW_ADMIN')))
-    user.save()
+    User.objects.create_superuser(
+        username=cast(str, os.getenv('USER_ADMIN')),
+        email=cast(str, os.getenv('EMAIL_ADMIN')),
+        password=cast(str, os.getenv('PASSW_ADMIN'))
+        )
 
 
 class PostDetailView(DetailView):
