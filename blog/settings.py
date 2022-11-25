@@ -112,18 +112,18 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # If you are using different databases for development and production.
 
-if not DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': cast(str, os.getenv('DB_NAME')),
-            'USER': cast(str, os.getenv('DB_USER')),
-            'PASSWORD': cast(str, os.getenv('DB_PASSWORD')),
-            'HOST': cast(str, os.getenv('DB_HOST')),
-            'PORT': int(cast(int, os.getenv('DB_PORT')))
-        }
-    }
-else:
+# if not DEBUG:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': cast(str, os.getenv('DB_NAME')),
+#             'USER': cast(str, os.getenv('DB_USER')),
+#             'PASSWORD': cast(str, os.getenv('DB_PASSWORD')),
+#             'HOST': cast(str, os.getenv('DB_HOST')),
+#             'PORT': int(cast(int, os.getenv('DB_PORT')))
+#         }
+#     }
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
