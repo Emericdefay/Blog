@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
 
     #'whitenoise.runserver_nostatic',
-    #'django.contrib.staticfiles',
+    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -191,7 +191,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/posts/static/'
 # MEDIA_URL = '/media/'
 # STATIC_URL = cast(str, os.getenv('STATIC_URL', '/static/'))
 MEDIA_URL = cast(str, os.getenv('MEDIA_URL', '/media/'))
