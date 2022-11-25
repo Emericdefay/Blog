@@ -27,7 +27,7 @@ window.app = (function app () {
   }(jQuery));
   
 
-window.app.makeBackground = makeBackground;
 window.app.setTheme = setTheme;
+window.app.makeBackground = makeBackground;
 window.app.makeComments = makeComments;
 window.app.copyButton = copyButton;
