@@ -179,7 +179,8 @@ textarea {
 
 .copyright {
   font: 200 14px 'Oswald', sans-serif;
-  color: #555;
+  font-weight: 600;
+  color: #363742;
   letter-spacing: 1px;
   text-align: center;
 }

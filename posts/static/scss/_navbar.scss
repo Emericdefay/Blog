@@ -1,0 +1,28 @@
+@import "variables";
+.navbar.bg-dark {
+    --bs-bg-opacity: 0;
+    transition-duration: 100ms;
+}
+
+.navbar .container .nav{
+    &-title {
+        color: var(--color-navbar-element-title);
+    }
+    &-item .nav-link{
+        color: var(--color-navbar-element-item);
+        transition-duration: 200ms;
+    }
+    &-item [data-theme=light] .nav-link{
+        font-weight: 600
+    }
+    &-item .nav-link:hover{
+        color: var(--color-navbar-element-item-hover);
+        transition-duration: 200ms;
+    }
+}
+
+[data-theme=light] .navbar .container .nav{
+    &-item  .nav-link{
+        font-weight: 600
+    }
+}

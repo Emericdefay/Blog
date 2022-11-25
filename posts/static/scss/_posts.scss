@@ -1,0 +1,12 @@
+.article{
+
+    h1 {
+        font-family: Satisfy, Courgette, Segoe Print, Caveat;
+
+    }
+    .article{
+        &-btns{
+            text-align: right;
+        }
+    }
+}

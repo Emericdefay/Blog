@@ -475,6 +475,11 @@
   background-color: #181818;
   border-color: #404040;
 }
+[data-theme=light] .card {
+  color: #bebebe;
+  background-color: #f1fff5ea;
+  border-color: #404040;
+}
 
 [data-theme=dark] .card-header,
 [data-theme=dark] .card-footer {
