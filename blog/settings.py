@@ -206,7 +206,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage') # CompressedManifestStaticFilesStorage
+#STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage') # CompressedManifestStaticFilesStorage
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
