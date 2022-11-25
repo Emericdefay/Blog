@@ -229,10 +229,10 @@ LOGOUT_REDIRECT_URL = '/'
 if not DEBUG:
     # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    #STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
-    #MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
-    STATIC_ROOT = cast(str, os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'staticfiles')))
-    MEDIA_ROOT = cast(str, os.getenv('MEDIA_ROOT', os.path.join(BASE_DIR, 'media')))
+    STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
+    #STATIC_ROOT = cast(str, os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'staticfiles')))
+    #MEDIA_ROOT = cast(str, os.getenv('MEDIA_ROOT', os.path.join(BASE_DIR, 'media')))
     pass
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
