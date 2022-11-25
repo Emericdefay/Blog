@@ -191,16 +191,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/posts/static/'
+# STATIC_URL = '/static/'
 # MEDIA_URL = '/media/'
-# STATIC_URL = cast(str, os.getenv('STATIC_URL', '/static/'))
+STATIC_URL = cast(str, os.getenv('STATIC_URL', '/static/'))
 MEDIA_URL = cast(str, os.getenv('MEDIA_URL', '/media/'))
-# STATIC_DIRS = [
-#     # os.path.join(BASE_DIR, 'static'),
-#     cast(str, os.getenv('STATIC_DIRS', os.path.join(BASE_DIR, 'static'))),
-#     os.path.join(BASE_DIR, 'posts', 'static'),
-#     '/var/www/static'
-# ]
+STATIC_DIRS = [
+    # os.path.join(BASE_DIR, 'static'),
+    cast(str, os.getenv('STATIC_DIRS', os.path.join(BASE_DIR, 'static'))),
+    os.path.join(BASE_DIR, 'posts', 'static'),
+    '/var/www/static'
+]
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -229,10 +229,12 @@ LOGOUT_REDIRECT_URL = '/'
 if not DEBUG:
     #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
-    #STATIC_ROOT = cast(str, os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'staticfiles')))
-    #MEDIA_ROOT = cast(str, os.getenv('MEDIA_ROOT', os.path.join(BASE_DIR, 'media')))
+    #STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
+    #MEDIA_ROOT = os.path.join(BASE_DIR, 'posts', 'media')
+    #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = cast(str, os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'staticfiles')))
+    MEDIA_ROOT = cast(str, os.getenv('MEDIA_ROOT', os.path.join(BASE_DIR, 'media')))
     pass
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'posts', 'static')
