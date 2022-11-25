@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY'))
+SECRET_KEY = cast(str, os.getenv('DJANGO_SECRET_KEY', 'replace-me'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False').lower() in ('True', '1', 'true')
+DEBUG = os.getenv('DEBUG', 'True').lower() in ('True', '1', 'true')
 ALLOWED_HOSTS = [
     '.blog-korpo.azurewebsites.net',
     '.emericdefay.com',
@@ -258,9 +258,9 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 # EMAIL SERVICE
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = cast(str, os.getenv('DEFAULT_FROM_EMAIL'))
-EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST'))
-EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER'))
-EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD'))
-EMAIL_PORT = int(cast(int, os.getenv('EMAIL_PORT')))
+DEFAULT_FROM_EMAIL = cast(str, os.getenv('DEFAULT_FROM_EMAIL', 'replace-me'))
+EMAIL_HOST = cast(str, os.getenv('EMAIL_HOST', 'replace-me'))
+EMAIL_HOST_USER = cast(str, os.getenv('EMAIL_HOST_USER', 'replace-me'))
+EMAIL_HOST_PASSWORD = cast(str, os.getenv('EMAIL_HOST_PASSWORD', 'replace-me'))
+EMAIL_PORT = int(cast(int, os.getenv('EMAIL_PORT', '123')))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'False').lower() in ('True', '1', 'true')
