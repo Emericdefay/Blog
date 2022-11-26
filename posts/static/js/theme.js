@@ -17,11 +17,11 @@ export const setTheme = () => {
   if (currentTheme == 'dark') {
     // set dark theme
     document.body.setAttribute('data-theme', 'dark');
-    themeBtn.innerHTML = '<i class="far fa-sun" aria-hidden="true"></i>';
+    themeBtn.innerHTML = '<i class="far fa-sun" aria-hidden="true"> Jour</i>';
   } else {
     // set light theme
     document.body.setAttribute('data-theme', 'light');
-    themeBtn.innerHTML = '<i class="far fa-moon" aria-hidden="true"></i>';
+    themeBtn.innerHTML = '<i class="far fa-moon" aria-hidden="true"> Nuit</i>';
   }
 
   themeBtn.addEventListener('click', function () {
@@ -33,11 +33,11 @@ export const setTheme = () => {
   function toggleTheme(theme) {
     if (theme == 'dark') {
       document.body.setAttribute('data-theme', 'light');
-      themeBtn.innerHTML = '<i class="far fa-moon" aria-hidden="true"></i>';
+      themeBtn.innerHTML = '<i class="far fa-moon" aria-hidden="true"> Nuit</i>';
       localStorage.setItem('theme', 'light');
     } else {
       document.body.setAttribute('data-theme', 'dark');
-      themeBtn.innerHTML = '<i class="far fa-sun" aria-hidden="true"></i>';
+      themeBtn.innerHTML = '<i class="far fa-sun" aria-hidden="true"> Jour</i>';
       localStorage.setItem('theme', 'dark');
     }
   }

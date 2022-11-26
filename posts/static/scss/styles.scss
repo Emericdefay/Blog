@@ -8,6 +8,7 @@
 @import "posts";
 @import "navbar";
 @import "theme_toggler";
+@import "cards";
 // @import "resume_style_print";
 // @import "resume_style";
 
@@ -221,28 +222,3 @@ html {
 }
 
 
-.card {
-	a {
-		text-decoration: none;
-		
-		img {
-			height: var(--height-posts-cards);
-			width: var(--width-posts-cards);
-		}
-	}
-
-	.card-body {
-		height: var(--height-posts-cards-body);
-	}
-
-	p {
-		font-family: 'Oswald', sans-serif;
-		color: var(--color-navbar-element-item);
-	}
-
-	&-title {
-		font-weight: 600;
-		color: var(--color-navbar-element-title);
-		font-family: Satisfy, Courgette, Segoe Print, Caveat;
-	}
-}

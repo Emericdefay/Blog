@@ -1,0 +1,51 @@
+@import "variables";
+
+.card {
+	a {
+		text-decoration: none;
+		
+	}
+	.card-top {
+        text-align: center;
+        height: var(--height-posts-cards-img);
+		
+		img {
+			height: var(--height-posts-cards);
+			max-width: fit-content;
+		}
+	}
+
+	.card-body {
+		height: var(--height-posts-cards-body);
+	}
+
+	p {
+		font-family: 'Oswald', sans-serif;
+		color: var(--color-navbar-element-item);
+	}
+
+	&-title {
+		font-weight: 600;
+		color: var(--color-navbar-element-title);
+		font-family: Satisfy, Courgette, Segoe Print, Caveat;
+	}
+
+}
+
+[data-theme=dark] .card {
+    transition-duration: 500ms;
+    &:hover{
+        background-color: #0e0e0e;
+        border-color: #6b6b6b;
+        transform: scale(1.01);
+    }
+}
+
+[data-theme=light] .card {
+    transition-duration: 500ms;
+    &:hover{
+        background-color: #b4d4d3;
+        border-color: #000000;
+        transform: scale(1.01);
+    }
+}

@@ -4,9 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 require('popper.js');
 require('bootstrap');
-require('mermaid');
 require('../scss/styles.scss');
-
 
 global.jQuery = jQuery;
 global.$ = global.jQuery;
