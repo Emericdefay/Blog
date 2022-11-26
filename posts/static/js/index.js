@@ -12,7 +12,7 @@ global.jQuery = jQuery;
 global.$ = global.jQuery;
 
 import {makeBackground} from './background';
-import {makeComments} from './comment';
+import {setBackground} from './navbar-background';
 import {setTheme} from './theme';
 import {copyButton} from './copy-button';
 
@@ -25,9 +25,8 @@ window.app = (function app () {
       icons: [],
     };
   }(jQuery));
-  
 
 window.app.setTheme = setTheme;
+window.app.setBackground = setBackground;
 window.app.makeBackground = makeBackground;
-window.app.makeComments = makeComments;
 window.app.copyButton = copyButton;

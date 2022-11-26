@@ -31,6 +31,38 @@
 
 :root{
     --height-posts-cards: 200px;
-    --height-posts-cards-body: 185px;
+    --height-posts-cards-img: 12rem;
+    --height-posts-cards-body: 14rem;
     --width-posts-cards: 100%;
+}
+
+// Navbar background
+:root{
+    --bs-dark-rgb: 24, 24, 24;
+}
+[data-theme=dark]{
+    --bs-dark-rgb: 24, 24, 24;
+}
+[data-theme=light]{
+    --bs-dark-rgb: 78, 138, 148;
+}
+
+// toggler theme colors
+:root{
+    --toggler-theme-main-color: #fafbf0;
+    --toggler-theme-bg-color: #24212a;
+    --toggler-theme-brd-color: #24212a;
+    --toggler-theme-text-color: #24212a
+}
+[data-theme=dark]{
+    --toggler-theme-main-color: #fafbf0;
+    --toggler-theme-bg-color: #24212a;
+    --toggler-theme-brd-color: #24212a;
+    --toggler-theme-text-color: #24212a
+}
+[data-theme=light]{
+    --toggler-theme-main-color: #363742;
+    --toggler-theme-bg-color: #fafbf0;
+    --toggler-theme-brd-color: #111;
+    --toggler-theme-text-color: #fafbf0
 }

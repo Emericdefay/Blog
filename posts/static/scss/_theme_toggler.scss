@@ -1,0 +1,63 @@
+@import "variables";
+// --toggler-theme-main-color: #ffffff;
+// --toggler-theme-text-color: #ffffff;
+// --toggler-theme-bg-color: #000000;
+// --toggler-theme-brd-color: #111;
+
+.theme-toggler {
+  align-items: center;
+  background-color: var(--toggler-theme-main-color);
+  border: 2px solid var(--toggler-theme-brd-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--toggler-theme-text-color);
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 40px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.theme-toggler:after {
+  background-color: var(--toggler-theme-bg-color);
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.theme-toggler:hover:after {
+  transform: translate(0, 0);
+}
+
+.theme-toggler:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.theme-toggler:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .theme-toggler {
+    padding: 0 10px;
+  }
+}
