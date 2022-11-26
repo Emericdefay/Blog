@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load markdown_extras %}
-{% load comment_tags %}
 
 {% comment %} META {% endcomment %}
 {% block title %}
@@ -19,7 +18,6 @@
 {% comment %} Extras {% endcomment %}
 {% block extrajs %}
   <script>
-    window.app.makeComments();
     window.app.copyButton();
   </script>
 {% endblock extrajs %}
@@ -55,7 +53,6 @@
         {{ post.content | markdown |safe }}
       </div>
       <div>
-        {% render_comments post request %}
       </div>
     </div>
   </div>

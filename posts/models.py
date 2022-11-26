@@ -1,4 +1,3 @@
-from comment.models import Comment
 from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.urls import reverse
@@ -35,7 +34,6 @@ class Post(models.Model):
     nxt_post = models.ForeignKey(
         'self', related_name='next_post', on_delete=models.SET_NULL, null=True,
         blank=True, verbose_name='Next Post')
-    comments = GenericRelation(Comment)
 
     def __str__(self):
         return self.title

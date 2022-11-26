@@ -60,7 +60,6 @@ INSTALLED_APPS = [
 
     'mdeditor',
     'crispy_forms',
-    'comment',
     'corsheaders',
 
     'django.contrib.admin',
